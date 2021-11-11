@@ -62,7 +62,7 @@
     .box-side-front::before,
     .box-side-front::after {
         position: absolute;
-        font-size: 3vw;
+        font-size: 2.3vw;
         color: #aa9d56;
         font-family: "Rampart";
         width: 13vw;

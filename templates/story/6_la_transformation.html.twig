@@ -1,3 +1,5 @@
+{% extends 'base.html.twig' %}
+
 {% block title %}
     Transformation
 {% endblock %}
@@ -18,7 +20,7 @@
                 <div class="carousel-item active">
                     <div class="flex wrap">
                         <div class="col-11 col-md-8 col-lg-5 flex">
-                            <img src="../asset/img/chap6/etape1.jpg" class="img-carousel" alt="...">
+                            <img src="{{ asset('img/chap6/etape1.jpg') }} " class="img-carousel" alt="...">
                         </div>
                     </div>
                 </div>
@@ -26,7 +28,7 @@
                 <div class="carousel-item">
                     <div class="flex wrap">
                         <div class="col-11 col-md-8 col-lg-5 flex">
-                            <img src="../asset/img/chap6/etape2.jpg" class="img-carousel" alt="...">
+                            <img src="{{ asset('img/chap6/etape2.jpg') }} " class="img-carousel" alt="...">
                         </div>
                     </div>
                 </div>
@@ -34,16 +36,16 @@
                 <div class="carousel-item">
                     <div class="flex wrap">
                         <div class="col-11 col-md-8 col-lg-5 flex">
-                            <img src="../asset/img/chap6/etape4.jpg" class="img-carousel" alt=" ...">
+                            <img src="{{ asset('img/chap6/etape4.jpg') }} " class="img-carousel" alt=" ...">
                         </div>
                     </div>
                 </div>
 
                 <div class="carousel-item">
                     <div class="flex">
-                        <a href="7_un_nouveau_corps.php" class="btn button">Un nouveau corps</a>
+                        <a href="{{path('story_nouveau_corps')}}" class="btn button">Un nouveau corps</a>
                     </div>
-                    <div class="flex"> <img class="misa-navbar" src="../asset/img/misaGif.gif" alt=""></div>
+                    <div class="flex"> <img class="misa-navbar" src="{{ asset('img/misaGif.gif') }} " alt=""></div>
                 </div>
             </div>
         </div>

@@ -1,3 +1,5 @@
+{% extends 'base.html.twig' %}
+
 {% block title %}
     les ingrédients
 {% endblock %}
@@ -17,12 +19,12 @@
                 <div class="carousel-item active">
                     <div class="flex wrap">
                         <div class="col-11 col-md-8 col-lg-5 flex">
-                            <img src="../asset/img/chap3/misa-cry.jpg" class="img" alt="...">
+                            <img src="{{ asset('img/chap3/misa-cry.jpg') }} " class="img" alt="...">
                         </div>
                         <div class="col-11 col-md-8 col-lg-5 flex">
                             <div class="card-body">
                                 <p class="card-text">
-                                    <strong class="name-cat"><?php echo $cat_grey_name ?></strong> : Maintenant que nous nous sommes mis d’accord je vais vous donner les ingrédients pour le rituel de téléportation :
+                                    <strong class="name-cat">Misa</strong> : Maintenant que nous nous sommes mis d’accord je vais vous donner les ingrédients pour le rituel de téléportation :
                                     Il nous faut une larme de l’un d’entre nous et ça je peux la fournir directement :
                                     Voilà ça c’est fait
                                 </p>
@@ -34,17 +36,17 @@
                 <div class="carousel-item">
                     <div class="flex wrap">
                         <div class="col-11 col-md-8 col-lg-5 flex">
-                            <img src="../asset/img/chap3/pumpkin-chocked.jpg" class="img " alt="">
+                            <img src=" {{ asset('img/chap3/pumpkin-chocked.jpg') }} " class="img " alt="">
                         </div>
                         <div class="col-11 col-md-8 col-lg-5 flex">
                             <div class="card-body">
                                 <p class="card-text ">
                                     <strong class="name-cat">Pumpkin</strong> : Comment tu as fait ça ? Tu pleures sur commande ? <br><br>
-                                    <strong class="name-cat"><?php echo $cat_grey_name ?></strong> : Non c’est simple en fait … mais si je le dis vous allez encore me faire chier !!!<br><br>
+                                    <strong class="name-cat">Misa</strong> : Non c’est simple en fait … mais si je le dis vous allez encore me faire chier !!!<br><br>
                                     <strong class="name-cat">Pumpkin</strong> : Dis tout de suite ou je te cours après pour te chopper è_é<br><br>
-                                    <strong class="name-cat"><?php echo $cat_grey_name ?></strong> : J’ai pensé à une gamelle de croquette vide ….<br><br>
+                                    <strong class="name-cat">Misa</strong> : J’ai pensé à une gamelle de croquette vide ….<br><br>
                                     <strong class="name-cat">Pumpkin</strong> :……………… (J’en ai marre de lui -_-‘’).<br><br>
-                                    <strong class="name-cat"><?php echo $cat_grey_name ?></strong> …. Bon ensuite, Yuki tu iras chercher du lait !!<br><br>
+                                    <strong class="name-cat">Misa</strong> …. Bon ensuite, Yuki tu iras chercher du lait !!<br><br>
                                 </p>
                             </div>
                         </div>
@@ -54,19 +56,19 @@
                 <div class="carousel-item">
                     <div class="flex wrap">
                         <div class="col-11 col-md-8 col-lg-5 flex">
-                            <img src="../asset/img/chap3/yuki-chocked.jpg" class="img" alt="...">
+                            <img src="{{ asset('img/chap3/yuki-chocked.jpg') }} " class="img" alt="...">
                         </div>
                         <div class="col-11 col-md-8 col-lg-5 flex">
                             <div class="card-body">
                                 <p class="card-text">
                                     <strong class="name-cat">Yuki</strong> : QUoi MAisss Pou-Pourquoi moi T_T ?!!!<br><br>
-                                    <strong class="name-cat"><?php echo $cat_grey_name ?></strong> : Parce que tu es blanc, que le lait est aussi blanc et donc tu pourras te servir de ça à ton avantage<br><br>
+                                    <strong class="name-cat">Misa</strong> : Parce que tu es blanc, que le lait est aussi blanc et donc tu pourras te servir de ça à ton avantage<br><br>
                                     <strong class="name-cat">Yuki</strong> : (Pourquoi je me laisse toujours entrainer dans les histoires de mon frère … après tous les efforts que j’ai fait pour être parfait , je finis toujours par devenir son complice T_T )<br><br>
 
-                                    <strong class="name-cat"><?php echo $cat_grey_name ?></strong> : Pumpkin tu iras accompagner Yuki dans la cuisine , il me faudrait un morceau de baguette et au moins tu pourras veiller à ce que Yuki réussisse sa mission !!!<br><br>
+                                    <strong class="name-cat">Misa</strong> : Pumpkin tu iras accompagner Yuki dans la cuisine , il me faudrait un morceau de baguette et au moins tu pourras veiller à ce que Yuki réussisse sa mission !!!<br><br>
                                     <strong class="name-cat">Pumpkin</strong> : Pas de soucis par contre j’ai l’impression qu’on te ramène à manger plutôt qu’autre chose … Tu nous as déjà fais un plan comme ça juste car tu avais la flemme de partir prendre à manger toi-même !!<br><br>
-                                    <strong class="name-cat"><?php echo $cat_grey_name ?></strong> : Mais non , là je te jure que c’est du sérieux , je le jure sur mes croquettes !!<br><br>
-                                    <strong class="name-cat">Pumpkin</strong> : Tu as intérêt !! Viens Yuki on va voir si la voie est libre et toi <?php echo $cat_grey_name ?> surveille les environs !<br><br>
+                                    <strong class="name-cat">Misa</strong> : Mais non , là je te jure que c’est du sérieux , je le jure sur mes croquettes !!<br><br>
+                                    <strong class="name-cat">Pumpkin</strong> : Tu as intérêt !! Viens Yuki on va voir si la voie est libre et toi Misa surveille les environs !<br><br>
                                 </p>
                             </div>
                         </div>
@@ -76,12 +78,12 @@
                 <div class="carousel-item">
                     <div class="flex wrap">
                         <div class="col-11 col-md-8 col-lg-5 flex">
-                            <img src="../asset/img/chap3/meuble.png" class="img " alt="">
+                            <img src="{{ asset('img/chap3/meuble.png') }} " class="img " alt="">
                         </div>
                         <div class="col-11 col-md-8 col-lg-5 flex">
                             <div class="card-body">
                                 <p class="card-text ">
-                                    <strong class="name-cat"><?php echo $cat_grey_name ?></strong> : Pas de soucis , vous pouvez compter sur moi, j'ai l'emplacement idéal pour ça : le tiroir à vêtements de Chloé
+                                    <strong class="name-cat">Misa</strong> : Pas de soucis , vous pouvez compter sur moi, j'ai l'emplacement idéal pour ça : le tiroir à vêtements de Chloé
                                 </p>
                             </div>
                         </div>
@@ -91,12 +93,11 @@
                 <div class="carousel-item">
                     <div class="flex wrap">
                         <div class="col-11 col-md-8 col-lg-5 flex">
-                            <!-- <img src="../asset/img/chap2/pumpkin-serious.jpg" class="img" alt="..."> -->
                         </div>
                         <div class="col-11 col-md-8 col-lg-5 flex">
                             <div class="card-body">
                                 <p class="card-text">
-                                    <strong class="name-cat">Pumpkin</strong> : Oh non je crois que quelqu'un arrive, <?php echo $cat_grey_name ?> qu'est ce que tu fiches ?!!! C'est Michaël qui arrive !
+                                    <strong class="name-cat">Pumpkin</strong> : Oh non je crois que quelqu'un arrive, Misa qu'est ce que tu fiches ?!!! C'est Michaël qui arrive !
                                 </p>
                             </div>
                         </div>
@@ -106,12 +107,12 @@
                 <div class="carousel-item">
                     <div class="flex wrap">
                         <div class="col-11 col-md-8 col-lg-5 flex">
-                            <img src="../asset/img/chap3/mikie-milk.jpg" class="img " alt="">
+                            <img src="{{ asset('img/chap3/mikie-milk.jpg') }} " class="img " alt="">
                         </div>
                         <div class="col-11 col-md-8 col-lg-5 flex">
                             <div class="card-body">
                                 <p class="card-text ">
-                                    <strong class="name-cat">Pumpkin</strong> :<?php echo $cat_grey_name ?> fais diversion bordel, Michael a prit la carafe de lait et Yuki s’est caché dedans en croyant bien faire !!! <?php echo $cat_grey_name ?> !!!!! <br> <br>
+                                    <strong class="name-cat">Pumpkin</strong> : Misa fais diversion bordel, Michael a prit la carafe de lait et Yuki s’est caché dedans en croyant bien faire !!! Misa !!!!! <br> <br>
                                     <strong class="name-cat">Michael</strong> : Yuki qu’est ce que tu fous là !!! <br> <br>
                                     <strong class="name-cat">Pumpkin</strong> : Oh non il est trop tard !!!
                                 </p>
@@ -122,13 +123,13 @@
                 <div class="carousel-item">
                     <div class="flex wrap">
                         <div class="col-11 col-md-8 col-lg-5 flex">
-                            <img src="../asset/img/chap3/yuki-milk.jpg" class="img" alt="...">
+                            <img src="{{ asset('img/chap3/yuki-milk.jpg') }} " class="img" alt="...">
                         </div>
                         <div class="col-11 col-md-8 col-lg-5 flex">
                             <div class="card-body">
                                 <p class="card-text">
-                                    <strong class="name-cat">Yuki</strong> : Oh ooon , <?php echo $cat_grey_name ?> je te haiiiiiiiiiiiis !!!! <br> <br>
-                                    <strong class="name-cat">Pumpkin</strong> : <?php echo $cat_grey_name ?> si tu m'entends je vais te défoncer !!!!
+                                    <strong class="name-cat">Yuki</strong> : Oh ooon , Misa je te haiiiiiiiiiiiis !!!! <br> <br>
+                                    <strong class="name-cat">Pumpkin</strong> : Misa si tu m'entends je vais te défoncer !!!!
                                 </p>
                             </div>
                         </div>
@@ -137,12 +138,12 @@
                 <div class="carousel-item">
                     <div class="flex wrap">
                         <div class="col-11 col-md-8 col-lg-5 flex">
-                            <img src="../asset/img/chap3/yuki-hand.jpg" class="img " alt="">
+                            <img src="{{ asset('img/chap3/yuki-hand.jpg') }} " class="img " alt="">
                         </div>
                         <div class="col-11 col-md-8 col-lg-5 flex">
                             <div class="card-body">
                                 <p class="card-text ">
-                                    <strong class="name-cat">Yuki</strong> : Je suis fichu, il m’a choppé !!! Je le savais c’est toujours sur moi que retombe tes conneries <?php echo $cat_grey_name ?> !!! <br><br>
+                                    <strong class="name-cat">Yuki</strong> : Je suis fichu, il m’a choppé !!! Je le savais c’est toujours sur moi que retombe tes conneries Misa !!! <br><br>
                                     <strong class="name-cat">Michaël</strong> : Yuki ? vraiment ? Tu as de la chance qu’on soit le matin, je te laisse partir tranquillement car je n'ai pas le temps pour ça mais c'est l'unique chance que je t'accorde ...
                                 </p>
                             </div>
@@ -152,7 +153,7 @@
                 <div class="carousel-item">
                     <div class="flex wrap">
                         <div class="col-11 col-md-8 col-lg-5 flex">
-                            <img src="../asset/img/chap3/yuki-think.gif" class="img" alt="...">
+                            <img src="{{ asset('img/chap3/yuki-think.gif') }} " class="img" alt="...">
                         </div>
                         <div class="col-11 col-md-8 col-lg-5 flex">
                             <div class="card-body">
@@ -166,9 +167,9 @@
 
                 <div class="carousel-item">
                     <div class="flex">
-                        <a href="4_les_ingredients2.php" class="btn button">La récolte des ingrédients par Pumpkin !</a>
+                        <a href="{{path('story_ingredients_2')}}" class="btn button">La récolte des ingrédients par Pumpkin !</a>
                     </div>
-                    <div class="flex"> <img class="misa-navbar" src="../asset/img/misaGif.gif" alt=""></div>
+                    <div class="flex"> <img class="misa-navbar" src="{{ asset('img/misaGif.gif') }} " alt=""></div>
                 </div>
             </div>
         </div>

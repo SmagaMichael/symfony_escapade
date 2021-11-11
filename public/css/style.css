@@ -1,6 +1,6 @@
-@font-face {
+@font-face{
     font-family: "Rampart";
-    src: url("../police/Rampart_One/");
+    src: url("../police/Rampart_One/RampartOne-Regular.ttf");
 }
 
 html{
@@ -92,7 +92,7 @@ body{
 
 .button{
     color: #000;
-    background-color: #2ca92a;
+    background-color: #2ca92a !important;
     margin-top: 10px;
 }
 

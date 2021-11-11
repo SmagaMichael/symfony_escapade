@@ -23,13 +23,13 @@
 }
 .modal-content{
     box-shadow: 1px 1px 8px #38de1b;
-    color: #f8b208;
-    background-color: black;
+    color: #f8b208 !important;
+    background-color: black !important;
 }
 
 .button-modal-valid{
     color: #000;
-    background-color: #2ca92a;
+    background-color: #2ca92a !important;
 }
 .color-span{
     color: white;

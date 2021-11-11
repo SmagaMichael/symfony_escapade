@@ -1,6 +1,15 @@
+{% extends 'base.html.twig' %}
+
 {% block title %}
     Le trésor de l'escapade
 {% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+    <link rel="stylesheet" href="{{asset('css/surprise_box_mini.css')}} ">
+	<link rel="stylesheet" href="{{asset('css/surprise_box.css')}} ">
+{% endblock %}
+			
 
 
 {% block body %}
@@ -8,7 +17,7 @@
 <div class="bg-black">
     <div class="container-fluid">
         <!-- Changer le titre -->
-        <h2 class="col-12 col-md-12 col-lg-12 p-4 mt-5">La récolte des ingrédients par Yuki:</h2>
+        <h2 class="col-12 col-md-12 col-lg-12 p-4 mt-5">Le trésor de l'escapade:</h2>
 
         <div id="carousel-story" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
             <div class="carousel-indicators">
@@ -24,7 +33,7 @@
                                 <div class="box-side box-side-right"></div>
                                 <div class="box-side box-side-top"></div>
                                 <div class="box-side box-side-bottom"></div>
-                                <div class="emoji"><img class="ring" src="../asset/img/surpriseBox/ring2.png" alt=""></div>
+                                <div class="emoji"><img class="ring" src=" {{ asset('img/surpriseBox/ring2.png') }} " alt=""></div>
                             </div>
                     </div>
                 </div>
@@ -35,11 +44,16 @@
                         <a href="4_les_ingredients2.php" class="btn button m-3">Oui !</a>
                         <a href="4_les_ingredients2.php" class="btn button m-3">Non...</a>
                     </div>
-                    <div class="flex"> <img class="misa-navbar" src="../asset/img/misaGif.gif" alt=""></div>
+                    <div class="flex"> <img class="misa-navbar" src=" {{ asset('img/misaGif.gif')}} " alt=""></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{asset('js/surprise_box.js')}} "></script>
 {% endblock %}

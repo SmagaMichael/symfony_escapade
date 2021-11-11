@@ -29,12 +29,12 @@ $(".toTop").click(function () {
 // }
 
 var nb_carousel_item = $(".carousel-item").length;
-console.log(nb_carousel_item);
+// console.log(nb_carousel_item);
 
 
 
 for(let i = 0; i < nb_carousel_item; i++){
-  console.log('i = ', i)
+  // console.log('i = ', i)
   if(i === 0) {
     $("<button type=\"button\" data-bs-target=\"#carousel-story\" data-bs-slide-to=\""+(i)+"\" class=\"active\" aria-current=\"true\" aria-label=\"Slide "+(i+1)+"\"></button>").appendTo(".carousel-indicators");
   }else{

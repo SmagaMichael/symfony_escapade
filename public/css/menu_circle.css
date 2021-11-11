@@ -65,6 +65,56 @@
       background-position-x: center;
       background-position-y: center;
   }
+  .liste-course{
+      background-image: url('../img/circleButton/list2.png');
+      background-size: 90% 90%;
+      background-position-x: center;
+      background-position-y: center;
+      background-repeat: no-repeat;
+  }
+  .story-book{
+      background-image: url('../img/circleButton/story_book2.png');
+      background-size: 100% 100%;
+      background-position-x: center;
+      background-position-y: center;
+      background-repeat: no-repeat;
+  }
+  .meteo{
+      background-image: url('../img/circleButton/meteo.png');
+      background-size: 100% 100%;
+      background-position-x: center;
+      background-position-y: center;
+      background-repeat: no-repeat;
+  }
+  .love{
+      background-image: url('../img/circleButton/message-love.png');
+      background-size: 100% 100%;
+      background-position-x: center;
+      background-position-y: center;
+      background-repeat: no-repeat;
+  }
+
+  .flower1{
+      background-image: url('../img/circleButton/flower11.png');
+      background-size: 100% 100%;
+      background-position-x: center;
+      background-position-y: center;
+      background-repeat: no-repeat;
+  }
+  .flower2{
+      background-image: url('../img/circleButton/flower21.png');
+      background-size: 100% 100%;
+      background-position-x: center;
+      background-position-y: center;
+      background-repeat: no-repeat;
+  }
+  .flower3{
+    background-image: url('../img/circleButton/flower31.png');
+    background-size: 100% 100%;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
 
  
 
