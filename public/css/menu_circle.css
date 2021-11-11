@@ -1,0 +1,127 @@
+@media screen and (max-width: 749px) {
+  .paw-start{
+    height: 80px;
+    width: auto;
+    top: -60px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.all-circle{
+  position: absolute;
+  top: -25px;
+  left: 50%;
+}
+
+}
+
+@media screen and (min-width: 750px) {
+  .paw-start{
+    height: 80px;
+    width: auto;
+    margin-right: 35px;
+    top: -60px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.all-circle i {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #000000;
+  font-size: 26px;
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
+  left: -33px;
+  top: -20px;
+  box-shadow: 0 0 0.5rem #6ebf43;
+  transition-duration: 0.3s;
+  z-index: 2;
+}
+.all-circle{
+  position: absolute;
+  top: -25px;
+  left: 49.4%;
+}
+}
+
+
+
+
+
+
+.div-btn-paw{
+    position: relative;
+}
+
+
+  .site-mikie{
+      background-image: url(https://smaga-michael.fr/asset/img/ms2.ico);
+      background-size: 115% 115%;
+      background-position-x: center;
+      background-position-y: center;
+  }
+
+ 
+
+  .all-circle i {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000000;
+    font-size: 26px;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    left: -33px;
+    top: -20px;
+    box-shadow: 0 0 0.5rem #6ebf43;
+    transition-duration: 0.3s;
+    z-index: 2;
+  }
+   .all-circle i:hover {
+    box-shadow: 0 0 0 5px #6ebf43;
+    cursor: pointer;
+  }
+  
+   .all-circle.open {
+    opacity: 1;
+  }
+  
+  
+   .all-circle.open i:nth-of-type(1) {
+    transform: rotate(-90deg) translateX(120px) rotate(90deg);
+    transition-delay: 0s;
+  }
+   .all-circle.open i:nth-of-type(2) {
+    transform: rotate(-45deg) translateX(120px) rotate(45deg);
+    transition-delay: 0.1s;
+  }
+   .all-circle.open i:nth-of-type(3) {
+    transform: rotate(0deg) translateX(120px) rotate(0deg);
+    transition-delay: 0.2s;
+  }
+   .all-circle.open i:nth-of-type(4) {
+    transform: rotate(45deg) translateX(120px) rotate(-45deg);
+    transition-delay: 0.3s;
+  }
+   .all-circle.open i:nth-of-type(5) {
+    transform: rotate(90deg) translateX(120px) rotate(-90deg);
+    transition-delay: 0.4s;
+  }
+   .all-circle.open i:nth-of-type(6) {
+    transform: rotate(135deg) translateX(120px) rotate(-135deg);
+    transition-delay: 0.5s;
+  }
+   .all-circle.open i:nth-of-type(7) {
+    transform: rotate(180deg) translateX(125px) rotate(-180deg);
+    transition-delay: 0.6s;
+  }
+   .all-circle.open i:nth-of-type(8) {
+    transform: rotate(225deg) translateX(125px) rotate(-225deg);
+    transition-delay: 0.6s;
+  }

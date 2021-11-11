@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg">
+	<div class="container-fluid container">
+		<a class="navbar-brand flex" href="{{path('home')}} ">
+			<h1 class="title-nav-bar">Le trésor de l'escapade</h1>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<i class="fas fa-paw"></i>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<div class="flex">
+
+				<ul class="navbar-nav me-2 mb-2 mb-lg-0 ">
+					<li class="nav-item dropdown flex">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Chat-Pitre
+						</a>
+						<ul class="dropdown-menu dropdown-menu-chapitre" aria-labelledby="navbarDropdown">
+							<li>
+								<a class="dropdown-item" href=" {{path('story_introduction')}} ">Chapitre 1 : Introduction</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="2_le_plan_de_misa.php">Chapitre 2 : Le plan de
+									{# <?php echo $cat_grey_name ?> #}
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="3_les_ingredients.php">Chapitre 3 : La récolte des ingrédients(PARTIE Yuki)</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="4_les_ingredients2.php">Chapitre 4 : La récolte des ingrédients(PARTIE Pumpkin)</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="5_le_rassemblement.php">Chapitre 5 : Le rassemblement des ingrédients</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="6_la_transformation.php">Chapitre 6 : La transformation</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="7_un_nouveau_corps.php">Chapitre 7 : Un nouveau corps</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="999_le_tresor_de_lescapade.php">Chapitre 999 : Le trésor de l'escapade</a>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Bonus</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+					<li class="nav-item dropdown flex">
+						<a
+							class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">{# <?php echo $_SESSION['user']; ?> #}
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li>
+								<a class="dropdown-item" href="../login/logout.php">Déconnexion</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</nav>

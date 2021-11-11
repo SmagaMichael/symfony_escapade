@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Introduction !{% endblock %}
+
+{% block body %}
+	{{ app.request.uri }} <br>
+						{{ app.request.pathinfo }} <br>
+						{{ app.request.requesturi }}
+<div class="bg-black">
+    <div class="container-fluid">
+
+        <h2 class="col-12 col-md-12 col-lg-12 p-4 mt-4">Introduction:</h2>
+
+        <div id="carousel-story" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+            <div class="carousel-indicators">
+                <!-- bouton généré en javascript par rapport au nombre de carousel-item -->
+            </div>
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="flex wrap">
+                        <div class="col-11 col-md-8 col-lg-5">
+                            <img src=" {{asset('img/chap1/chloeMikie.png')}} " class="img-intro ">
+                        </div>
+                        <div class="col-11 col-md-8 col-lg-5">
+                            <div class="card-body">
+                                <p class="card-text"> Hum-hum , Nous y voila ! je vous fais une petite intro pour commencer comme il se doit. <br> <br>
+                                    Je vous présente ma petite famille enfin petite ... il y a eu pas mal de passage et de rencontre mais je vais vous présenter les principaux. <br> <br>
+                                    Le petit couple que voici, ce sont mes chers maîtres, ma douce petite Chloé avec qui je suis le plus mignon des chats, bon j'avoue que je reste beaucoup trop dans ses pattes, mais je l'aime tellement si vous saviez et puis avouons le , elle ne peut rien me refuser donc on est pas à l'abris d'un petit morceau de nourriture gratuit héhé. <br><br>
+                                    Puis il y a Michaël avec qui on arrête pas de trouver des idées pour s'embêter l'un et l'autre , parfois je fais tout pour l'embêter mais il a l'air de n'avoir aucune limite c'est assez frustrant, parfois je fuis aussi vite que possible car je sais qu'il peut m'embêter sans que je m'y attendes, il est imprévisible, on peut très bien faire un calin et 2 secondes après je suis enrouller dans une converture !!! Mais je pense qu'on peut dire qu'on s'adore à notre manière ça s'est clair ! Nous sommes des compères hors-pair !!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="flex wrap">
+                        <div class="col-11 col-md-8 col-lg-5 flex">
+                            <img src=" {{asset('img/chap1/3cats.jpg')}} " class="img-intro" alt="">
+                        </div>
+                        <div class="col-11 col-md-8 col-lg-5 flex">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Et voici leurs 3 petits monstres adorés : Pumpkin le petit chat roux que vous pouvez voir , c'est un sacré numéro celui là je vous jure depuis qu'il est arrivé dans notre famille il me vole la vedette mais bon j'avoue qu'il frole la perfection, <br><br>
+
+                                    Yuki le petit chat blanc (qui est mon frère en passant), que dire de lui ... Il n'y a pas plus doux et plus gentil que lui, pas un coup de griffe, pas un coup de pattes, il passe son temps à se laisser faire par Pumpkin, et tout les humains pensent que s'est une femelle hihi, ce qui nous fait beaucoup rire Pumpkin et moi, pour résumé s'est un ange, je comprends pourquoi son pelage est blanc immaculé <br><br>
+
+                                    Et puis il y a moi : Misa votre fidèle serviteur. <br>
+                                    Je vous laisse me découvrir au fil de l'histoire mais soyez sûr d'une chose ! On ne s'ennuie pas non plus avec moi vous verrez ! </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <p class="flex card-text">Voila maintenant que les présentations sont faites , je vais pourvoir commencer mon récit !
+                    <div class="flex">
+                        <a href="2_le_plan_de_misa.php" class="btn button"><b>Le plan de Misa</b> </a> <br>
+                    </div>
+                    <div class="flex"> <img class="misa-navbar" src="{{asset('img/misaGif.gif')}} " alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

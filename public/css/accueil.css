@@ -1,0 +1,38 @@
+@media screen and (max-width: 749px) {
+    .accueil-misa{
+        height: 100%;
+        width: auto;
+        padding-left: 35px;
+    }
+
+  }
+
+  @media screen and (min-width: 750px) {
+    .accueil-misa{
+        height: 100%;
+        width: auto;
+    }
+  }
+
+
+.bg-accueil{
+    width: 100%;
+    overflow: hidden;
+    padding: 60px;
+    background-color:#000;
+}
+.modal-content{
+    box-shadow: 1px 1px 8px #38de1b;
+    color: #f8b208;
+    background-color: black;
+}
+
+.button-modal-valid{
+    color: #000;
+    background-color: #2ca92a;
+}
+.color-span{
+    color: white;
+}
+
+

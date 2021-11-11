@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+<div class="bg-accueil">
+    <div class="container flex">
+        <img class="accueil-misa " src=" {{asset('img/accueilMisa.jpg')}} " alt="">
+    </div>
+
+    <div class="container flex bg-black div-btn-paw">
+        <img class="btn-circle paw-start" src=" {{asset('img/pawStart1.png')}} " alt="">
+        <span class="all-circle">
+            <i class="fas fa-book" data-bs-toggle="modal" data-bs-target="#modal-accueil"></i>
+            <i class="fas fa-cloud-sun-rain"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fa fa-tumblr site-mikie"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-twitter"></i>
+        </span>
+    </div>
+</div>
+
+
+<div class="modal fade" id="modal-accueil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Miaou !!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Bonjour <span class="color-span"><b> Chloé </b></span>, je suis le chat-rateur de l'histoire , je vais t'accompagner tout au long de cette aventure !! <br>
+                Pour commencer tu peux me donner un petit nom juste ici :
+
+                <form action="" method="POST">
+                    <input class="form-control" id="cat-grey-name" type="text">
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                <button type="button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modal-cat-grey-name" id="btn-validate-name-grey-cat" class="btn button-modal-valid">Valider</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-cat-grey-name" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Miaou !!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="parent-refresh-grey-cat">
+                <p id="refresh-name-grey-cat"> Oh quel joli prénom !!! ^ w ^ , très bien je m'appellerai donc <span class="color-span"><strong class="name-grey-cat-modal"><?php echo $cat_grey_name ?></strong></span> ! Tu verras je ne sais pas très bien ronronner mais je vais te raconter une histoire comme jamais personne ne t'en a raconté :3 , je vais te raconter MON histoire roooouuuuhhh-roooouuuhhh !!
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                <a href="1_introduction.php" class="btn button-modal-valid">C'est parti !</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
