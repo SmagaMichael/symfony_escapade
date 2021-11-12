@@ -17,6 +17,7 @@
 								<th scope="col">#</th>
 								<th scope="col">Nom</th>
 								<th scope="col">Quantité</th>
+								<th scope="col">Supprimer</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -29,6 +30,9 @@
 									</td>
 									<td>
 										{{item.quantity}}
+									</td>
+									<td>
+										<a href="{{ path('list_remove_item', {'id': item.id}) }}">Supprimer item {{item.id}}</a>
 									</td>
 								</tr>
 							{% endfor %}
@@ -47,7 +51,6 @@
 					<div class="d-flex justify-content-around mt-2">
 						<button type="submit" class="btn btn-lg button">Ajouter !</button>
                         <a href=" {{path('list_empty')}} " class="btn btn-lg button">Vider</a>
-
 					</div>
 					{{ form_end(itemForm) }}
 				</div>

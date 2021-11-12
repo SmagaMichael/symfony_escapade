@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ListItemsController extends AbstractController
 {
     #[Route('/list/items', name: 'list_items')]
-    public function buiItem(Request $request,BuyItemRepository $buyItemRepository): Response
+    public function buiItem(Request $request, BuyItemRepository $buyItemRepository): Response
     {
 
         $all_items = $buyItemRepository->findAll();
@@ -43,18 +43,31 @@ class ListItemsController extends AbstractController
             'items' => $all_items,
         ]);
     }
-    
-
-#[Route('/list/empty', name: 'list_empty')]
-public function listEmpty(Request $request, EntityManagerInterface $entityManager): Response
-{
-
-    $connection = $entityManager->getConnection();
-    $platform = $connection->getDatabasePlatform();
-    // $connection->beginTransaction();
-    $connection->executeStatement($platform->getTruncateTableSQL('buy_item', true));
-    // $connection->commit();
 
 
-    return $this->redirectToRoute('list_items');}
+    #[Route('/list/empty', name: 'list_empty')]
+    public function listEmpty(Request $request, EntityManagerInterface $entityManager): Response
+    {
+
+        $connection = $entityManager->getConnection();
+        $platform = $connection->getDatabasePlatform();
+        // $connection->beginTransaction();
+        $connection->executeStatement($platform->getTruncateTableSQL('buy_item', true));
+        // $connection->commit();
+
+
+        return $this->redirectToRoute('list_items');
+    }
+
+
+    #[Route('/list/remove/{id}', name: 'list_remove_item')]
+    public function removeItem($id, EntityManagerInterface $entityManager, BuyItemRepository $buyItemRepository): Response
+    {
+
+        $item = $buyItemRepository->find($id);
+        $entityManager->remove($item);
+        $entityManager->flush();
+
+        return $this->redirectToRoute('list_items');
+    }
 }
