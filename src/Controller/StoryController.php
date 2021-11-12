@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -9,6 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class StoryController extends AbstractController
 {
     #[Route('/story/introduction', name: 'story_introduction')]
+    // #[IsGranted('Role_ADMIN')]
     public function intro(): Response
     {
         return $this->render('story/1_introduction.html.twig', [
