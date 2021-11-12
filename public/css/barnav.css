@@ -105,3 +105,8 @@ top: 50px !important;
     width: 100%;
     background-color: black;
 }
+.btn-connect{
+    color: #f8b208 !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+}

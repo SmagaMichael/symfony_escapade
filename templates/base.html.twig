@@ -30,7 +30,7 @@
 	</head>
 	<body>
 		{# Si on est sur ailleurs que sur la page de connexion alors on affiche la navbar #}
-		{% if '{{ app.request.pathinfo }}' != "connexion" %}
+		{% if (app.request.pathinfo | striptags | slice(1, 5) != "login") %}
 			{% include "shared/_navbar.html.twig" %}
 		{% endif %}
 
