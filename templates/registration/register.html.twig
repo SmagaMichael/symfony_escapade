@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription
+{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href=" {{asset('css/bootstrap.min.css')}} ">
+	<link rel="stylesheet" href=" {{asset('css/login/footer-cat.css')}} ">
+	<link rel="stylesheet" href=" {{asset('css/login/login.css')}} ">
+{% endblock %}
+
+{% block body %}
+	<div class="login-form">
+		{{ form_start(registrationForm) }}
+		{{ form_row(registrationForm.name, {'attr': {'class': 'form-control'}}) }}
+		{{ form_row(registrationForm.email, {'attr': {'class': 'form-control'}}) }}
+		{{ form_row(registrationForm.plainPassword, {
+                label: 'Password',
+                attr: {'class': 'form-control'}
+            }) }}
+		{# {{ form_row(registrationForm.agreeTerms) }} #}
+
+		<div class="d-flex justify-content-around mt-2">
+			<button type="submit" class="btn btn-lg btn-primary">S'inscrire !</button>
+			<a href=" {{path('app_login')}} " class="btn btn-lg btn-primary">Connexion</a>
+		</div>
+
+		{{ form_end(registrationForm) }}
+	</div>
+	<div class="footer-login">
+		<div id="marco">
+			<div id="cielo"></div>
+			<div id="luna"></div>
+			<div id="gato"></div>
+			<div id="muro"></div>
+			<div id="edificios"></div>
+		</div>
+	</div>
+
+
+{% endblock %}
