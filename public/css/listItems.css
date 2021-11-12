@@ -1,3 +1,8 @@
 .the-list{
     border: 1px solid green;
 }
+
+.pumpkin-list{
+    height: 25px;
+    width: auto;
+}
