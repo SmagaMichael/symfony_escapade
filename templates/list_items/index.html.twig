@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste de course
+{% endblock %}
+
+
+{% block body %}
+	<div class="bg-black">
+		<div class="container-fluid">
+			<h2 class="col-12 col-md-12 col-lg-12 p-4 mt-4">Notre petite liste de course :</h2>
+
+			<div class="d-flex justify-content-center">
+				<div class="the-list col-12 col-md-12 col-lg-6">
+					<table class="table table-secondary table-striped">
+						<thead>
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">Nom</th>
+								<th scope="col">Quantité</th>
+							</tr>
+						</thead>
+						<tbody>
+
+							{% for key, item in items %}
+								<tr>
+									<th scope="row">{{key + 1}}</th>
+									<td>
+										{{item.name}}
+									</td>
+									<td>
+										{{item.quantity}}
+									</td>
+								</tr>
+							{% endfor %}
+
+						</tbody>
+					</table>
+					{{ form_start(itemForm) }}
+					<div class="d-flex justify-content-center">
+						<div class="col-lg-8">
+							{{ form_row(itemForm.name, {'attr': {'class': 'form-control'}}) }}
+						</div>
+						<div class=" offset-lg-1 col-lg-3">
+							{{ form_row(itemForm.quantity, {'attr': {'class': 'form-control'}}) }}
+						</div>
+					</div>
+					<div class="d-flex justify-content-around mt-2">
+						<button type="submit" class="btn btn-lg button">Ajouter !</button>
+                        <a href="" class="btn btn-lg button">Vider</a>
+
+					</div>
+					{{ form_end(itemForm) }}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
