@@ -2,40 +2,44 @@
 
 {% block title %}Liste de course
 {% endblock %}
-
+{% block stylesheets %}
+	{{parent()}}
+	<link rel="stylesheet" href="{{asset('css/listItems.css')}} ">
+{% endblock %}
 
 {% block body %}
 	<div class="bg-black">
-		<div class="container-fluid">
-			<h2 class="col-12 col-md-12 col-lg-12 p-4 mt-4">Notre petite liste de course :</h2>
-			<div class="d-flex justify-content-center">			<img class="misa-list" src=" {{asset('img/list/misa-list.png')}} "> 
-</div>
+		<div class="container-fluid ">
 
-			<div class="d-flex justify-content-center">
+
+			<div class="d-flex justify-content-center ">
 				<div class="the-list col-12 col-md-12 col-lg-6">
-					<table class="table table-secondary table-striped">
+					<div class="d-flex justify-content-center banner-list">
+						<img class="misa-list" src=" {{asset('img/list/cat-banner.png')}} ">
+					</div>
+					<table class="table ">
 						<thead>
 							<tr>
 								<th scope="col">#</th>
 								<th scope="col">Nom</th>
-								<th scope="col">Quantité</th>
-								<th scope="col">Supprimer</th>
+								<th class="the-list-td" scope="col">Quantité</th>
+								<th class="the-list-td" scope="col">Supprimer</th>
 							</tr>
 						</thead>
 						<tbody>
 
 							{% for key, item in items %}
-								<tr>
+								<tr >
 									<th scope="row">{{key + 1}}</th>
 									<td>
 										{{item.name}}
 									</td>
-									<td>
+									<td class="the-list-td">
 										{{item.quantity}}
 									</td>
-									<td>
-										<a href="{{ path('list_remove_item', {'id': item.id}) }}"> 
-											<img class="pumpkin-list" src=" {{asset('img/list/pumpkin-list.png')}} "> 
+									<td class="the-list-td" >
+										<a href="{{ path('list_remove_item', {'id': item.id}) }}">
+											<img class="pumpkin-list" src=" {{asset('img/list/pumpkin-list.png')}} ">
 										</a>
 									</td>
 								</tr>
@@ -44,21 +48,26 @@
 						</tbody>
 					</table>
 					{{ form_start(itemForm) }}
-					<div class="d-flex justify-content-center">
-						<div class="col-lg-8">
-							{{ form_row(itemForm.name, {'attr': {'class': 'form-control'}}) }}
+					<div class="d-flex justify-content-around align-items-center div-input">
+						<div class="d-flex justify-content-center align-items-center div-input">
+							{{ form_row(itemForm.name, {'attr': {'class': 'input-list', 'placeholder': 'Nom'}}) }}
 						</div>
-						<div class=" offset-lg-1 col-lg-3">
-							{{ form_row(itemForm.quantity, {'attr': {'class': 'form-control'}}) }}
+						<div class="d-flex justify-content-center align-items-center div-input">
+							{{ form_row(itemForm.quantity, {'attr': {'class': 'input-list', 'placeholder': 'Quantité'}}) }}
 						</div>
 					</div>
-					<div class="d-flex justify-content-between mt-2">
-						<button type="submit" class="btn btn-lg button">Ajouter !</button>
-                        <a href=" {{path('list_empty')}} " class="btn btn-lg button">Vider</a>
+					<div class="d-flex justify-content-center mt-2">
+						<button type="submit" class="btn  button-list">Ajouter !</button>
+						<a href=" {{path('list_empty')}} " class="btn button-list">Vider</a>
 					</div>
 					{{ form_end(itemForm) }}
 				</div>
 			</div>
 		</div>
 	</div>
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+	<script src="{{asset('js/list.js')}} "></script>
 {% endblock %}

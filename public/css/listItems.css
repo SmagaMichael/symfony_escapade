@@ -1,8 +1,78 @@
+@font-face{
+    font-family: "Yuji_Mai";
+    src: url("../police/Yuji_Mai/YujiMai-Regular.ttf");
+}
+input.input-list:-internal-autofill-selected {
+    background-color: rgba(255, 255, 255, 0) !important;
+    background-image: url('../img/list/border_wood.jpg') !important;
+    color: rgb(0, 0, 0) !important;
+}
+.table{
+    border: 1px solid black;
+}
+
 .the-list{
-    border: 1px solid green;
+    font-family: 'Yuji_Mai';
+    font-weight: bold;
+    border: 5px solid;
+    border-image: url('../img/list/border_wood.jpg') 30;
+    margin-top: 9em;
+    position: relative;
+    background-image: url('../img/list/border_wood.jpg');
+
 }
 
 .pumpkin-list{
     height: 25px;
     width: auto;
+}
+.misa-list{
+    height: 100px;
+    width: auto;
+    position: absolute;
+    top: -80px;
+}
+.banner-list{
+    /* background-image: url('../img/list/cat-banner.png'); */
+   background-repeat: no-repeat;
+   background-position: center;
+}
+.button-list{
+    height: 40px;
+    background-image: url('../img/list/border_wood.jpg');
+    text-align: center;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    border: 1px solid black;
+    text-decoration: none;
+    text-transform: none;
+    width: 50%;
+}
+.button-list:hover{
+    color: black;
+}
+
+.input-list{
+    width: 100%;
+    background-image: url('../img/list/border_wood.jpg');
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+.input-list::placeholder {
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+
+
+
+.div-input{
+    height: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+.the-list-td{
+    text-align: center;
 }

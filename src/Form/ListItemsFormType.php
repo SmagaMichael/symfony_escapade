@@ -12,8 +12,12 @@ class ListItemsFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('name')
-            ->add('quantity')
+            ->add('name', null, [
+                'label' => ' ',
+            ])
+            ->add('quantity', null, [
+                'label' => ' ',
+            ])
         ;
     }
 
