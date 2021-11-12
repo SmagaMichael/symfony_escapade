@@ -5,7 +5,10 @@ namespace App\Controller;
 use App\Entity\BuyItem;
 use App\Form\ListItemsFormType;
 use App\Repository\BuyItemRepository;
+use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -40,5 +43,18 @@ class ListItemsController extends AbstractController
             'items' => $all_items,
         ]);
     }
+    
 
+#[Route('/list/empty', name: 'list_empty')]
+public function listEmpty(Request $request, EntityManagerInterface $entityManager): Response
+{
+
+    $connection = $entityManager->getConnection();
+    $platform = $connection->getDatabasePlatform();
+    // $connection->beginTransaction();
+    $connection->executeStatement($platform->getTruncateTableSQL('buy_item', true));
+    // $connection->commit();
+
+
+    return $this->redirectToRoute('list_items');}
 }
