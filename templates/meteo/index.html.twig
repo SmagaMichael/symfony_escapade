@@ -11,90 +11,62 @@
 {% block body %}
 	<div class="container-meteo">
 
-        <div class="overlay-icone-chargement">
-            <img src=" {{asset('img/meteo/chargement/circles.svg')}}" alt="logo chargement">
-        </div>
+		<div class="overlay-icone-chargement">
+			<img src=" {{asset('img/meteo/chargement/circles.svg')}}" alt="logo chargement">
+		</div>
 
-		<h1 class="title-meteo ">Application Météo</h1>
+		<h1 class="title-meteo col-12 col-md-12 col-lg-12">Météo pour escapade !</h1>
 
-		<div class="bloc-logo-info">
-			<div class="bloc-logo">
-				<img src="" alt="" class="logo-meteo">
+		<div class="bloc-logo-info col-12 col-md-12 col-lg-7">
+			<div class="logo-with-info" >
+				<div class="bloc-logo col-6 col-md-6 col-lg-6">
+					<img src="" alt="" class="logo-meteo">
+					<div class="info-current">
+						<p class="temps"></p>
+						<p class="temperature"></p>
+						{# <p class="localisation"></p> #}
+					</div>
+				</div>
+				<div class="block-info col-6 col-md-6 col-lg-6">
+					<img src="{{asset('img/meteo/misa-rain.jpg')}}" class="misa-report" alt="">
+				</div>
 			</div>
-			<div class="block-info">
-				<p class="temps"></p>
-				<p class="temperature"></p>
-				<p class="localisation"></p>
+			<div class="flash-info slide-right col-12 col-md-12 col-lg-12">
+				<p>Flash info : Misa en direct !!!</p>
 			</div>
 		</div>
 
-		<div class="heure-bloc-prevision">
-			<div class="bloc-h">
-				<p class="heure-nom-prevision"></p>
-				<p class="heure-prevision-valeur"></p>
+		{# div des heures par jour #}
+		<div class="col-12 col-md-12 col-lg-7">
+			<div class="heure-bloc-prevision ">
+				{% for j in 1..7 %}
+					<div class="bloc-h">
+						<p class="heure-nom-prevision"></p>
+						<img src="" class="heure-prevision-icon" alt="">
+						<p class="heure-prevision-valeur"></p>
+					</div>
+				{% endfor %}
 			</div>
-			<div class="bloc-h">
-				<p class="heure-nom-prevision"></p>
-				<p class="heure-prevision-valeur"></p>
-			</div>
-			<div class="bloc-h">
-				<p class="heure-nom-prevision"></p>
-				<p class="heure-prevision-valeur"></p>
-			</div>
-			<div class="bloc-h">
-				<p class="heure-nom-prevision"></p>
-				<p class="heure-prevision-valeur"></p>
-			</div>
-			<div class="bloc-h">
-				<p class="heure-nom-prevision"></p>
-				<p class="heure-prevision-valeur"></p>
-			</div>
-			<div class="bloc-h">
-				<p class="heure-nom-prevision"></p>
-				<p class="heure-prevision-valeur"></p>
-			</div>
-			<div class="bloc-h">
-				<p class="heure-nom-prevision"></p>
-				<p class="heure-prevision-valeur"></p>
+
+			{# div des jours de la semaine #}
+			<div class="jour-prevision-bloc ">
+				{% for j in 1..7 %}
+					<div class="bloc-j">
+						<p class="jour-prevision-nom"></p>
+						<img src="" class="jour-prevision-icon" alt="">
+						<p class="jour-prevision-temp"></p>
+					</div>
+				{% endfor %}
 			</div>
 		</div>
 
-		<div class="jour-prevision-bloc">
-			<div class="bloc-j">
-				<p class="jour-prevision-nom"></p>
-				<p class="jour-prevision-temp"></p>
-			</div>
-			<div class="bloc-j">
-				<p class="jour-prevision-nom"></p>
-				<p class="jour-prevision-temp"></p>
-			</div>
-			<div class="bloc-j">
-				<p class="jour-prevision-nom"></p>
-				<p class="jour-prevision-temp"></p>
-			</div>
-			<div class="bloc-j">
-				<p class="jour-prevision-nom"></p>
-				<p class="jour-prevision-temp"></p>
-			</div>
-			<div class="bloc-j">
-				<p class="jour-prevision-nom"></p>
-				<p class="jour-prevision-temp"></p>
-			</div>
-			<div class="bloc-j">
-				<p class="jour-prevision-nom"></p>
-				<p class="jour-prevision-temp"></p>
-			</div>
-			<div class="bloc-j">
-				<p class="jour-prevision-nom"></p>
-				<p class="jour-prevision-temp"></p>
-			</div>
-		</div>
 
 	</div>
 
 {% endblock %}
 
 {% block javascripts %}
+	{{parent()}}
 	<script src=" {{asset('js/meteo/gestionTemps.js')}} "></script>
 	<script type="module" src=" {{asset('js/meteo/main.js')}} "></script>
 {% endblock %}
