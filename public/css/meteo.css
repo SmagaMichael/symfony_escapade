@@ -16,10 +16,12 @@
     flex-wrap: wrap;
     width: 100%;
     height: auto;
-    background: linear-gradient(45deg, #1068b6, #ec60a6);
     margin: 4rem auto 0;
     position: relative;
     border: 1px solid #f1f1f1;
+    background: linear-gradient(45deg, #10b0b6, #000000);
+    color: wheat;
+
 }
 
 .title-meteo {
@@ -48,6 +50,7 @@
 /* logo avec info principal */
 .bloc-logo {
     width: 50%; 
+    position: relative;
 }
 
 .bloc-logo img {
@@ -104,6 +107,14 @@
 .info-current{
    display: flex; 
    justify-content: center;
+   border: 1px solid wheat;
+    border-radius: 15px;
+    width: auto;
+    color: wheat;
+    background-color: black;
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
 }
 
 .info-current p{
