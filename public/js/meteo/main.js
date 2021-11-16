@@ -114,8 +114,18 @@ function AppelAPI(long, lat) {
 // animation flash info
 
 var info = [
-'<p>Il n\'y a plus de croquette ! Alerte générale.</p>',
-'<p>Michaël aime à la folie sa petite chérie .</p>'];
+'<p>Il n\'y a plus de croquette ! Alerte générale!</p>',
+'<p>Michaël aime à la folie sa petite chérie .</p>',
+'<p>Yuki va t\'il enfin se venger de Pumpkin ?</p>',
+'<p>Chloé a encore ramené des fleurs miam !</p>',
+'<p>Message de vos petits chats préférés : </p>',
+'<p>Pumpkin : Quelqu\'un pour jouer ? Aller !!! </p>',
+'<p>Yuki : Oh non pas Pumpkin ! Au secours !</p>',
+'<p>Misa (moi) : Je vous aime chers maîtres <3</p>',
+'<p>Fin de transmission c\'était votre Misa !</p>',
+'<p>A vous les miaous ! Euh les studios !!</p>',
+'<p>PS: Venez me chercher, il pleut ici ... FIN </p>',
+];
 var index = 0;
 
 function change_title() {
@@ -135,11 +145,11 @@ function change_right() {
 }
 
 function to_left() {
-setInterval(change_left, 10000);
+setInterval(change_left, 5000);
 };
 
 function to_right() {
-    setInterval(change_right, 20000);
+    setInterval(change_right, 10000);
 };
 
 to_left();
