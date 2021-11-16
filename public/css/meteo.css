@@ -18,10 +18,18 @@
     height: auto;
     margin: 4rem auto 0;
     position: relative;
-    border: 1px solid #f1f1f1;
+
+}
+.night-container{
     background: linear-gradient(45deg, #10b0b6, #000000);
     color: wheat;
+    border: 1px solid #f1f1f1;
+}
 
+.light-container{
+    background: linear-gradient(45deg, #005dff, #d5dd5d);
+    color: rgb(0, 0, 0);
+    border: 1px solid #000000;
 }
 
 .title-meteo {
@@ -107,18 +115,24 @@
 .info-current{
    display: flex; 
    justify-content: center;
-   border: 1px solid wheat;
     border-radius: 15px;
     width: auto;
-    color: wheat;
-    background-color: black;
     position: absolute;
     bottom: 10%;
     left: 20%;
 }
 
+.info-current-night{
+    border: 1px solid wheat;
+    background-color: black;
+}
+.info-current-light{
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(248, 248, 248);
+}
 .info-current p{
    margin: 0 10px; 
+   text-transform: capitalize;
 }
 
 .info{
@@ -152,6 +166,7 @@
     width: 100%;
     height: auto;
     border: 9px ridge #38364c;
+    margin-bottom: 10px;
 }
 
 

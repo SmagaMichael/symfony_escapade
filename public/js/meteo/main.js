@@ -93,17 +93,21 @@ function AppelAPI(long, lat) {
                 iconParJ[m].src = `img/meteo/AllIcone/${resultatsAPI.daily[m + 1].weather[0].icon}.svg`
             }
 
-
-
-            // Icone dynamique 
-            // if (heureActuelle >= 6 && heureActuelle < 21) {
-            //     imgIcone.src = `img/meteo/nuit/${resultatsAPI.current.weather[0].icon}.svg`
-            // } else {
-            //     imgIcone.src = `img/meteo/jour/${resultatsAPI.current.weather[0].icon}.svg`
-            // }
-
             imgIcone.src = `img/meteo/AllIcone/${resultatsAPI.current.weather[0].icon}.svg`
+
+            if(resultatsAPI.current.dt < resultatsAPI.current.sunset){
+                console.log('il fait nuit')
+                $('.container-meteo').removeClass('light-container').addClass('night-container');
+                $('.info-current').removeClass('info-current-light').addClass('info-current-night');
+            }else{
+                console.log('il fait jour')
+                $('.container-meteo').removeClass('night-container').addClass('light-container');
+                $('.info-current').removeClass('info-current-night').addClass('info-current-light');
+            }
+
             chargementContainer.classList.add('disparition');
+
+
 
         })
 }
@@ -132,7 +136,7 @@ function change_title() {
     var x = info[index];
     $('.flash-info').html(x);
     index++;
-    if (index >= title.length) { index = 0; }
+    if (index >= info.length) { index = 0; }
 };
 
 function change_left() {
