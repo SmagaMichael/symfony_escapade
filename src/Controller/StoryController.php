@@ -104,7 +104,7 @@ class StoryController extends AbstractController
     #[Route('/story/plan_2_de_misa', name: 'story_plan_deux_misa')]
     public function plan_de_misa(): Response
     {
-        return $this->render('story/12_le_seconde_plan_de_misa.html.twig', [
+        return $this->render('story/12_le_second_plan_de_misa.html.twig', [
             'controller_name' => 'StoryController',
         ]);
     }

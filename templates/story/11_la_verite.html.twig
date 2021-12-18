@@ -1,0 +1,593 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	La vérité
+{% endblock %}
+
+{% block body %}
+
+	<div class="bg-black">
+		<div class="container-fluid">
+			<h2 class="col-12 col-md-12 col-lg-12 p-4 mt-5">
+				La vérité:</h2>
+			<div id="carousel-story" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+				<div
+					class="carousel-indicators"><!-- bouton généré en javascript par rapport au nombre de carousel-item -->
+				</div>
+				<div class="carousel-inner">
+
+					<div class="carousel-item active">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/1.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text">
+										<strong class="name-cat">Pumpkin :
+										</strong>Au non Steffy n’a pas pris sa peluche il faut lui ramener !
+
+										<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/2.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Misa :</strong>
+										Han non flemme, de toute manière elle en aura surement plein dans sa nouvelle famille non ?
+										<br><br>
+										<strong class="name-cat">Yuki :</strong>
+										T’es vraiment égoïste quand tu t’y mets c’est incroyable …
+										<br><br>
+										<strong class="name-cat">Misa :</strong>
+										Humm…<br><br>
+										<strong class="name-cat">Yuki :</strong>
+										Je viens avec toi moi !
+										<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										D’accord, laissons monsieur rabat joie ici >.><br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/3.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Aller cours Yuki dépêche-toi !!<br><br>
+										<strong class="name-cat">Yuki :</strong>
+										Oui oui !!!<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/4.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :
+										</strong>Ah parfait, il y a encore de la lumière elle n’est peut-être pas toujours partie !
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/5.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Yuki :
+										</strong>Tiens c’est quoi ce camion ? Peut-être qu’il est à la nouvelle famille de Steffy … D’ailleurs je ne la vois pas …
+										<br><br>
+										<strong class="name-cat">Pumpkin :
+										</strong>Peut-être que ses bagages sont à l’arrière du camion attends je vais voir !
+										<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/6.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :
+										</strong>Ahhhhhhhhhh !!!!! Yuki … Ne regarde pas dans le camion !
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/7.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Yuki :
+										</strong>[Cri d’horreur].
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/8.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Yuki :
+										</strong>Oh non non non !!!! Qu’est ce qui est arrivé à Steffy !!!!!!!!
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/9.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">?????? :</strong>
+										Qui voilà ?!!!
+										<br><br>
+										<strong class="name-cat">?????? 2 :</strong>
+										Va voir, j’ai aussi entendu du bruit !
+										<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Cache-toi !
+										<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/10.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :
+										</strong>Sous le camion vite !
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/11.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Yuki :
+										</strong>Gloupsss ! Une main monstrueuse vient de prendre Steffy !
+										<br><br>
+										<strong class="name-cat">Pumpkin :
+										</strong>Mais ferme là !
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/12.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">?????? :
+										</strong>Humm, j’ai envie d’y gouter un peu miamm !
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/13.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">?????? 2 :</strong>
+										Non !!! on n’y touche pas ! Tu sais bien que cette marchandise est réservée aux démons de haut rang, met la dans le bocal pour qu’elle ne perde pas sa fraicheur !
+										<br><br>
+										<strong class="name-cat">?????? :</strong>
+										Oh ça van celle-ci est jeune, ce sont les plus vieux qui sont des produits de luxe non ? Si on ne peut même plus faire un crock … Et hop, emballé c’est pesé !
+										<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/14.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										(Quoi ?! Des démons ?!)<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/15.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Démon :</strong>
+										Apparemment celle-ci s’appelait Steffy , dans son monde c’était un oiseau assez bruyant qu’on a réussi à invoquer ici, ces invocations fonctionnent vraiment bien histoire de nous nourrir en plus des humains que l’on garde avec eux 😊 Le prochain c’est dans un mois c’est ça ?<br><br>
+										<strong class="name-cat">Démon 2 :</strong>
+										Oui c’est bien ça, les hauts rangs vont commander l’un des plus vieux ils me semblent. Et ceux-là, il faudra en prendre soin car c’est considéré comme du luxe.<br><br>
+										<strong class="name-cat">Démon :</strong>
+										Oui c’est bon j’ai compris …<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/16.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Maman :</strong>
+										Alors c’est bon vous avez fini ? Je peux retourner auprès des enfants ?<br><br>
+										<strong class="name-cat">Démon :</strong>
+										Oui c’est bon, merci.<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/17.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin [chuchotant] :
+										</strong>
+										Quoi ?! Mais c’est maman ! Tiens-toi prêt on doit remonter aux dortoirs avant elle !<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/18.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Démon :</strong>
+										Tenez la petite avait sa peluche, elle n’en aura plus besoin désormais, vous n’aurez qu’à la donner à un autre enfant plus tard.<br><br>
+										<strong class="name-cat">Maman :</strong>
+										Oh je n’avais pas vu qu’elle l’avait prise, il me semblait l’avoir mise sur la table, effectivement merci et à dans un mois.<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/19.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Aller ne t’arrête pas cours !! On doit se planquer et reprendre nos esprits avant de rentrer et d’inquiéter tout le monde ! Viens derrière le batiment !<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/20.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Yuki :</strong>
+										Mais c’est quoi se bordel T_T On vient vraiment de voir une enfant se faire tuer pour être dévorée par des démons ? Et en plus maman est de mèche c’est ça ?<br><br>
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/21.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Putain mais qu’est ce qui se passe là … L’aventure avait si bien commencé, on s’amusait avec tous les autres c’était parfait et là Steffy est morte puis on apprend que ce lieu sert de garde-manger à des démons ? Vraiment ? !!! Il faut vite trouver Misa !<br><br>
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap11/22.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Misa :</strong> Bah alors vous en avez mis du temps ! Et c’est quoi vos têtes la ?<br><br>
+									</p>
+								
+							</p>
+						</div>
+					</div>
+                    
+
+				</div>
+			</div>
+
+			<div class="carousel-item">
+				<div class="flex wrap">
+					<div class="col-11 col-md-8 col-lg-5 flex">
+						<img src="{{ asset('img/chap11/23.png') }} " class="img" alt="...">
+					</div>
+					<div class="col-11 col-md-8 col-lg-5 flex">
+						<div class="card-body">
+							<p class="card-text ">
+								<strong class="name-cat">Yuki :</strong>
+								Alors toi et tes idées foireuses d’aventures je te retiens ! C’est pire que la fois où on est tombé dans deux cours séparées crois moi …<br><br>
+								<strong class="name-cat">Pumpkin :</strong>
+								Steffy est morte …<br><br>
+								<strong class="name-cat">Misa :</strong>
+								Quuuuoi ? !!<br><br>
+								<strong class="name-cat">Pumpkin :</strong>
+								Chut !!!!!!!! Venez dans la bibliothèque tous les deux, on va te raconter ce qu’il vient de se passer !<br><br>
+
+
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item">
+				<div class="flex wrap">
+					<div class="col-11 col-md-8 col-lg-5 flex">
+						<img src="{{ asset('img/chap11/24.png') }} " class="img" alt="...">
+					</div>
+					<div class="col-11 col-md-8 col-lg-5 flex">
+						<div class="card-body">
+							<p class="card-text ">
+								<strong class="name-cat">Misa :</strong>
+								Bon qu’est-ce qu’il se passe ?! C’est vrai ce que vous me racontez la ? C’est encore une idée pour essayer de me faire flipper ?<br><br>
+
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item">
+				<div class="flex wrap">
+					<div class="col-11 col-md-8 col-lg-5 flex">
+						<img src="{{ asset('img/chap11/25.png') }} " class="img" alt="...">
+					</div>
+					<div class="col-11 col-md-8 col-lg-5 flex">
+						<div class="card-body">
+							<p class="card-text ">
+								<strong class="name-cat">Yuki :</strong>
+								Tu as déjà vu Pumpkin dans cet état ? Quand il prépare les pires blagues il ne peut pas s’empêcher d’être mort de rire …<br><br>
+
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item">
+				<div class="flex wrap">
+					<div class="col-11 col-md-8 col-lg-5 flex">
+						<img src="{{ asset('img/chap11/26.png') }} " class="img" alt="...">
+					</div>
+					<div class="col-11 col-md-8 col-lg-5 flex">
+						<div class="card-body">
+							<p class="card-text ">
+								<strong class="name-cat">Misa :</strong>
+								C’est vrai … Racontez moi ce que vous avez vu alors !<br><br>
+
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item">
+				<div class="flex wrap">
+					<div class="col-11 col-md-8 col-lg-5 flex">
+						<img src="{{ asset('img/chap11/27.png') }} " class="img" alt="...">
+					</div>
+					<div class="col-11 col-md-8 col-lg-5 flex">
+						<div class="card-body">
+							<p class="card-text ">
+								<strong class="name-cat">Pumpkin :</strong>
+								On est bien arrivé à la grille sauf qu’il n’y avait personne, ni aucun bruit, il y avait seulement un camion qui attendait donc on s’est dit que c’était surement à la famille qui venait chercher Steffy, j’ai voulu mettre la peluche à l’arrière du camion et c’est à ce moment-là que j’ai vu …<br><br>
+								<strong class="name-cat">Yuki :</strong>
+								Il a vu Steffy morte, puis quelqu’un nous a entendu, on s’est caché sous le camion, et c’est là qu’on a pu voir deux démons avec d’énormes griffes ! L’un d’eux a même voulu bouffer Steffy directement !<br><br>
+								<strong class="name-cat">Pumpkin :</strong>
+								L’autre la stoppé en disant que c’était de la nourriture réservée aux démons de hauts rangs, que les enfants ici était soit des humains qui ont grandi dans cet endroit, soit des animaux qu’ils invoquent ici sous forme d’humains pour ensuite les bouffer, Steffy était apparemment un oiseau de là où elle venait…<br><br>
+
+
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item">
+				<div class="flex wrap">
+					<div class="col-11 col-md-8 col-lg-5 flex">
+						<img src="{{ asset('img/chap11/28.png') }} " class="img" alt="...">
+					</div>
+					<div class="col-11 col-md-8 col-lg-5 flex">
+						<div class="card-body">
+							<p class="card-text ">
+								<strong class="name-cat">Misa :</strong>
+								Quoi ? Donc en gros on est dans une foutu ferme d’humain qui sert de nourriture aux démons ?<br><br>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item">
+				<div class="flex wrap">
+					<div class="col-11 col-md-8 col-lg-5 flex">
+						<img src="{{ asset('img/chap11/29.png') }} " class="img" alt="...">
+					</div>
+					<div class="col-11 col-md-8 col-lg-5 flex">
+						<div class="card-body">
+							<p class="card-text ">
+								<strong class="name-cat">Pumpkin :</strong>
+								C’est ça … Tu nous crois là ?<br><br>
+								<strong class="name-cat">Misa :</strong>
+								Oui… Autant toi tu aurais pu tout inventer mais Yuki n’aurait pas aussi bien raconté un aussi gros mensonge …<br><br>
+								<strong class="name-cat">Pumpkin :</strong>
+								Ah et aussi ils ont dit qu’il prendrait un des plus vieux dans un mois ! Mais si tu regardes autours de nous, je crois bien que c’est l’un de nous ! D’ailleurs j’y pense mais si on meurt dans ce monde il se passe quoi ?<br><br>
+
+
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item">
+				<div class="flex wrap">
+					<div class="col-11 col-md-8 col-lg-5 flex">
+						<img src="{{ asset('img/chap11/30.png') }} " class="img" alt="...">
+					</div>
+					<div class="col-11 col-md-8 col-lg-5 flex">
+						<div class="card-body">
+							<p class="card-text ">
+								<strong class="name-cat">Misa :</strong>
+								Je n’en sais rien, mais je pense qu’il va vraiment falloir penser à se barrer maintenant que l’on sait tout ça, pour l’instant faisons comme si de rien était histoire de ne pas montrer que l’on sait l’envers du décor et voir ce que l’on peut faire, soit pour nous échapper, soit pour retourner dans notre monde, si la prochaine livraison est bien dans un mois, ça nous laisse du temps pour savoir quoi faire …<br><br>
+								<strong class="name-cat">Pumpkin :</strong>
+								Oui faisons ça, par contre un truc me chiffonne Steffy … On aurait vraiment dit une petite fille normale…<br><br>
+								<strong class="name-cat">Misa :</strong>
+								Peut-être que les autres animaux ne se souviennent plus qui ils sont en venant ici, pour nous ça ne doit pas être pareil puisqu’on est venu de nous-même…<br><br>
+								<strong class="name-cat">Pumpkin :</strong>
+								Oui tu as peut-être raison…<br><br>
+
+
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="carousel-item">
+				<div class="flex">
+					<a href="{{path('story_plan_deux_misa')}}" class="btn button">Le second plan de Misa</a>
+				</div>
+				<div class="flex">
+					<img class="misa-navbar" src="{{ asset('img/misaGif.gif') }} " alt=""></div>
+			</div>
+		</div>
+	</div>
+</div></div>{% endblock %}

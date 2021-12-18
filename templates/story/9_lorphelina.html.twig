@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	L'orphelina
+{% endblock %}
+
+{% block body %}
+
+	<div class="bg-black">
+		<div class="container-fluid">
+			<h2 class="col-12 col-md-12 col-lg-12 p-4 mt-5">L'orphelina :</h2>
+			<div id="carousel-story" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+				<div
+					class="carousel-indicators"><!-- bouton généré en javascript par rapport au nombre de carousel-item -->
+				</div>
+				<div class="carousel-inner">
+
+					<div class="carousel-item active">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap9/1.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text">
+										<strong class="name-cat">Pumpkin :
+										</strong>
+										Hey regardez, il y a enfin un bâtiment là-bas ! Je vous l’avais bien dit ! S’il y a un bâtiment il y aura forcément des humains pour nous accueillir ! Et on pourra surement y dormir 😊 
+										<br><br>
+										<strong class="name-cat">Yuki :
+										</strong>
+										Parfait, j’avais mal aux pattes depuis notre début d’exploration … Comment font les humains pour marcher sur leurs deux pattes alors qu’ils en ont quatre…
+										<br><br>
+										<strong class="name-cat">Misa :
+										</strong>
+										Pied … On a des pieds maintenant tu es long à t’adapter … Bref allons-y, j’espère qu’il y a de la nourriture, j’ai faim moi T_T 
+										<br><br>
+										<strong class="name-cat">Yuki :
+										</strong>
+										Etonnant…, visiblement ce n’était pas ton corps le problème, même en humain tu as toujours faim apparemment …  
+										<br><br>
+										<strong class="name-cat">Misa :
+										</strong>
+										Toi, tu te tais ! Bon on va voir ?! Ou on continue de se geler les PIEDS 😊 ?  
+										<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap9/2.jpg') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :
+										</strong>
+										
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+					<div class="carousel-item">
+						<div class="flex">
+							<a href="{{path('story_vie_quotidienne')}}" class="btn button">Nouvelle vie quotidienne</a>
+						</div>
+						<div class="flex">
+							<img class="misa-navbar" src="{{ asset('img/misaGif.gif') }} " alt=""></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,228 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Un nouveau monde
+{% endblock %}
+
+{% block body %}
+
+	<div class="bg-black">
+		<div class="container-fluid">
+			<h2 class="col-12 col-md-12 col-lg-12 p-4 mt-5">Un nouveau monde :</h2>
+			<div id="carousel-story" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+				<div
+					class="carousel-indicators"><!-- bouton généré en javascript par rapport au nombre de carousel-item -->
+				</div>
+				<div class="carousel-inner">
+
+					<div class="carousel-item active">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap8/1.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text">
+										<strong class="name-cat">Pumpkin :
+										</strong>
+										Bon maintenant que vous vous êtes bien foutu de moi, on peut explorer la zone ? Histoire de voir où nous sommes ? è_é ?!
+										<br><br>
+										<strong class="name-cat">Misa :
+										</strong>
+										Ouai c’est bon, mais bon pour une fois que les rôles sont inversés, on n’allait pas se priver hein Yuki ?! ;)
+										<br><br>
+										<strong class="name-cat">Yuki :
+										</strong>
+										J’avoue hihi ! Hey regardez là-bas il y a une immense grille :o C’est surement le début de notre aventure non ?
+										<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap8/2.jpg') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :
+										</strong>
+										Zut ! Elle est fermée … Impossible de passer… Dommage en chat on serait passé facilement …
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap8/3.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :
+										</strong>
+										Bon continuons à explorer on tombera bien sur quelques choses d’intéressant, après tout Misa nous a prédit une grande aventure non ? 😉
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap8/4.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<br><br>
+										<strong class="name-cat">Misa :
+										</strong>
+										Ouai tu as raison, on ne passera pas par-là, donc autant aller explorer de l’autre côté.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap8/5.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										[Un peu plus loin …]
+										<br><br>
+										<strong class="name-cat">Pumpkin :
+										</strong>
+										C’est bizarre il y a des clôtures ici mais rien n’a l’air d’être gardé grâce à celles-ci et puis des clôtures si petite … <br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap8/6.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+                                    <strong class="name-cat">Misa :
+										</strong>
+										Carrément, en tout cas c’est pas Michaël qui se serait servi de ça pour m’empêcher de m’échapper héhé.
+										<br><br>
+										<strong class="name-cat">Yuki :
+										</strong>
+										C’est clair ! J’imagine que vous voulez aller voir ce qu’il se trouve de l’autre coté n’est-ce pas ?
+										<br><br>
+										<strong class="name-cat">Pumpkin & Misa :
+										</strong>
+										Evidémment !
+										<br><br>
+										
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap8/7.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+                                    <strong class="name-cat">Yuki :
+										</strong>
+										Bon bah là c’est beaucoup plus efficace que la barrière c’est sûr … Plus qu’à longer le mur pour voir, ça doit bien donner sur quelque chose ^^
+										
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap8/8.jpg') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+                                    <strong class="name-cat">Misa :
+										</strong>
+										Quoi !! on retomber sur cette grille de malheur ? ! Bon bah on peut déjà supposer un truc : on est clairement enfermé à l’intérieur de ces murs en bétons immenses et il y a juste cette grille en guise d’entrée sortie …
+										<br><br>
+										<strong class="name-cat">Yuki :
+										</strong>
+										Ton reflexe à toujours tout analyser ce qui t’entoure m’étonnera toujours…
+										<br><br>
+										<strong class="name-cat">Misa :
+										</strong>
+										C’est grâce à ça que je suis le roi de la fuite non ?
+										<br><br>
+										<strong class="name-cat">Yuki :
+										</strong>
+										Je suppose…
+										<br><br>
+										<strong class="name-cat">Misa :
+										</strong>
+										En tout cas je ne sais pas vous mais j’ai un mauvais présentiment…
+										<br><br>
+										
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap8/9.jpg') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+									<strong class="name-cat">Pumpkin :
+										</strong>Mais non aller il doit bien avoir un truc à garder pour avoir autant de mur et de clôture ici, si en faisant le tour on ne trouve rien, il y a forcément quelque chose au milieu …
+										<br><br>
+										<strong class="name-cat">Misa :
+										</strong>Rahlala toujours aussi positif hein …
+										<br><br>
+										<strong class="name-cat">Pumpkin :
+										</strong>: Faut bien que je compense le fait que tu sois un peu plus négatif que la moyenne héhé
+										<br><br>
+										<strong class="name-cat">Pumpkin :
+										</strong>Et bien allons-y !
+										<br><br>
+										[Après quelques temps de marche...]
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="carousel-item">
+						<div class="flex">
+							<a href="{{path('story_orphelina')}}" class="btn button">L'orphelina</a>
+						</div>
+						<div class="flex">
+							<img class="misa-navbar" src="{{ asset('img/misaGif.gif') }} " alt=""></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
