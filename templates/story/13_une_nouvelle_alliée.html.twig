@@ -1,0 +1,492 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Nouvelle alliée
+{% endblock %}
+
+{% block body %}
+
+	<div class="bg-black">
+		<div class="container-fluid">
+			<h2 class="col-12 col-md-12 col-lg-12 p-4 mt-5">
+				Une nouvelle alliée :</h2>
+			<div id="carousel-story" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+				<div
+					class="carousel-indicators"><!-- bouton généré en javascript par rapport au nombre de carousel-item -->
+				</div>
+				<div class="carousel-inner">
+
+					<div class="carousel-item active">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap13/1.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text">
+										<strong class="name-cat">Pumpkin :</strong>
+										Ah Donna tu es là ! Je te cherchais partout. Il faut que je te parle d’un truc super important !
+
+										<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap13/2.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Donna :</strong>
+										Tu tombes bien, moi aussi Pumpkin …<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Quoi ?! Euh bah vas-y toi d’abord ^^’<br><br>
+										<strong class="name-cat">Donna :</strong>
+										Très bien mais si je me trompe tu vas surement me prendre pour une folle ...<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Oh ça ne sera pas plus fou et terrible que ce que j’ai à t’annoncer …<br><br>
+										<strong class="name-cat">Donna :</strong>
+										Terrible ?!<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Oui … Mais vas-y commence avant, autant commencer par un truc plus léger 😉<br><br>
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap13/3.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Donna :</strong>
+										D’accord …<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Wohh tu a l’air sérieuse tout à coup :o <br>
+																				.<br>
+																				.<br>
+																				.<br>
+
+										<strong class="name-cat">Donna :</strong>
+										Je vais aller droit au but … Etais-tu un chat avant ?<br><br>
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap13/4.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Quoi ?! Mais où es-tu allée chercher cette idée ?!!<br><br>
+										<strong class="name-cat">Donna :</strong>
+										…<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Au moins tu auras réussi à détendre l’atmosphère juste avant que je t’annonce quelques choses !<br><br>
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap13/5.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Donna :</strong>
+										Tu as l’air embarrassé ! Peut-être que tu n’oses pas me dire qui tu es car tu ne sais pas réellement qui je suis … Très bien je me lance … Si je te dis que dans notre monde je suis déjà allé sur ton dos pendant que tu étais allongé dans une baignoire…<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap13/6.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Attends une minute … Oh mon dieu ! Tu es la tortue dans l’aquarium de Michaël et Chloé c’est ça ?! Dis comme ça, si je me trompe ça paraitra aussi bizarre hihi ^^’<br><br>
+										<strong class="name-cat">Donna :</strong>
+										Oh Pumpkin c’est bien toi !!!! Je le savais !!! En même temps un phénomène comme toi c’était obligé, il doit y en avoir qu’un ! Ça fait un mois que je n’ose pas te poser la question … Et donc les deux autres avec qui tu traines tout le temps s’est …<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										C’est bien Misa et Yuki les deux autres chats que tu pouvais voir de ton aquarium ^^<br><br>
+										<strong class="name-cat">Donna :</strong>
+										D’accord, Oh moins je saurais vos noms dans notre monde maintenant ! Puisqu’on ne parlait pas la même langue, c’était difficile de savoir… Par contre… Tu es une fille ? Je pensais que tu étais un male…<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Euuh si si je le suis, c’est juste que j’ai trop pensais à Chloé pendant ma transformation XD<br><br>
+										<strong class="name-cat">Donna :</strong>
+										[Eclate de rire] : C’est bien ce que je disais un phénomène XD<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Mais qu’est-ce que tu fiches ici ? Et du coup tu t’appelles vraiment Donna ?<br><br>
+										<strong class="name-cat">Donna :</strong>
+										Oui … Chloé pensait que j’étais un male et m’a appelé Donatello, ce qui n’est déjà pas original mais en plus c’est pour un male … Donc pour moi-même j’ai raccourci en Donna 😊 <br>
+										Et je ne sais pas ce que je fais là, je vous ai regardé jeter ce sort débile que Misa vous a proposé puis je me suis retrouvé ici ! Sauf que vous êtes arrivez bien longtemps après moi, je dirais 2 mois après …<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Hein ?! Attend on est arrivé il y a 1 mois … Tu as passé 3 mois ici ?!<br><br>
+										<strong class="name-cat">Donna :</strong>
+										*soupir* Oui, la seule raison à laquelle j’ai pensé c’était que comme je suis plus petite, j’ai mis moins longtemps à me changer… Imagine le choc… L’autre avec moi dans l’aquarium doit bien s’amuser maintenant que je suis plus là, elle a gagné…<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										ça ne risque pas, d’après Misa, le temps est comme figé dans notre monde, il peut se passer des mois ici et dans notre monde il se sera passé juste quelques secondes ^^<br><br>
+										<strong class="name-cat">Donna :</strong>
+										Et bien … Puisque Misa le dit …<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Avant que tu le demandes, non nous ne savons pas encore comment rentrer …<br><br>
+
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap13/7.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+
+										<strong class="name-cat">Donna :</strong>
+										Etonnant de la part de Misa… Il sait partir mais pour savoir revenir c’est autre chose ^^’ En tout cas je suis contente de pouvoir enfin te parler, ça fait un mois que vous êtes arrivé mais avec tout le monde, on n’a pas eu le temps de vraiment se rencontrer et puis dans notre monde … C’est encore plus compliqué puisqu’on n’est pas de la même espèce ^^’<br><br>
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap13/8.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Donna :</strong>
+										Je voudrais une chose ! Le temps qu’on passe ici, je voudrais qu’on puisse se dire absolument tout avant que l’on ne rentre et qu’il ne soit plus possible de communiquer !<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap13/9.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Promis Donna, je suis impatient de te connaitre !<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap13/10.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										On pourra même s’inventer un code à nous ! Bon on ne pourra jamais se faire de grande conversation mais genre je pourrais lever une patte pour te dire ça va et toi tu fais le lapin avec des pattes comme tu sais si bien le faire pour me dire oui ou alors tu patauges beaucoup pour me dire non !<br><br>
+										<strong class="name-cat">Donna :</strong>
+										ça me va !!<br><br>
+
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap13/11.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										C’est vrai, juste une chose, ne dis à personne qui nous sommes vraiment, la plupart nous prendraient pour des fous je pense ^^ J’ai hâte de dire à Yuki et Misa qui tu es vraiment ! J’imagine déjà leur tête XD !<br><br>
+										<strong class="name-cat">Donna :</strong>
+										D’accord, je comprends !<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Bon à moi maintenant de te raconter quelques choses … ça va être assez dur à entendre puisque tu es là depuis plus longtemps et donc forcément tu as dû te rapprocher encore plus de ceux qui était là … Viens on va dans la bibliothèque pour ne pas être dérangé ! <br><br>
+																				[Pumpkin raconte toute la vérité et tout ce qu’il sait à Donna]
+
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap13/12.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Donna :</strong>
+										Oh non pas ça …<br><br>
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap13/13.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Vas-y assis toi et prend tout le temps qu’il te faudra …<br><br>
+										<strong class="name-cat">Donna :</strong>
+										ça veut dire que les autres enfants que j’ai vu partir sont aussi…<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Malheureusement oui ….<br><br>
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap13/14.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										A vous êtes arrivé ?<br><br>
+										<strong class="name-cat">Yuki :</strong>
+										Oui, je l’ai dit à Rufus, ça a été compliqué mais il m’a cru, tu viens seulement de le dire à Donna ?<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Oui, on a été retardé par une autre conversation avant … D’ailleurs, il faudra que je te dise un truc à propos de Donna à toi et Misa.<br><br>
+										<strong class="name-cat">Yuki :</strong>
+										Euh d’accord …<br><br>
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap13/15.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Yuki :</strong>
+										J’ai aussi apporté le plan de notre évasion, Misa l’a mis à jour avec pas mal d’annotation pour le montrer à Rufus et Donna.<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap13/16.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Rufus :</strong>
+										Misa a même fait un plan ? Quel gars méticuleux !<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap13/17.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Donna :</strong>
+										Je n’aurais pas pensé ça de lui, d’ailleurs à par manger, je ne savais pas qu’il pouvait avoir un autre talent …<br><br>
+										<strong class="name-cat">Rufus :</strong>
+										Tu connais Misa depuis longtemps ?<br><br>
+										<strong class="name-cat">Donna :</strong>
+										Au moins 4 ans je dirais ^^<br><br>
+										<strong class="name-cat">Yuki :</strong>
+										Hein ?!<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Euuh Donna !<br><br>
+										<strong class="name-cat">Donna :</strong>
+										Euh je voulais dire 3 mois désolé ! Ma langue a fourché ^^<br><br>
+										<strong class="name-cat">Rufus :</strong>
+										Ah d’accord ^^<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										(Ce n’est pas passé loin … Fiiuuu).<br><br>
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap13/18.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Alors Rufus on peut compter sur toi ?<br><br>
+										<strong class="name-cat">Rufus :</strong>
+										Bien sûr que oui, je ne vais pas attendre ici et me faire bouffer ! Vous pouvez compter sur moi !<br><br>
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap13/19.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Merci beaucoup !<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap13/20.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Je vous l’avais bien dit que c’était une bonne idée de prévenir les plus grands !<br><br>
+										<strong class="name-cat">Yuki :</strong>
+										C’est vrai tu as eu raison ^^ Au faite c’était quoi ça tout à l’heure avec Donna ?<br><br>
+										<strong class="name-cat">Misa :</strong>
+										Oui c’est vrai, pourquoi elle a dit qu’elle me connaissait depuis 4 ans ? Elle n’a pas eu l’air de s’être trompée avant que tu l’as reprenne…<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Rohlala si vous saviez !!! Donna … Bah c’est la gentille tortue de l’aquarium ! <br><br>
+																				
+										<strong class="name-cat">Misa & Yuki :</strong>
+										Quoiiiiiiiiiiiiii ???! <br><br>
+																				
+																				[Pumpkin raconte ce que Donna lui a dit]<br><br>
+
+										<strong class="name-cat">Misa :</strong>
+										Donc elle est arrivée avant nous car elle a ‘chargé’ plus vite d’après elle ?<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										C’est ça !<br><br>
+
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap13/21.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Yuki :</strong>
+										Ah se demander pourquoi tu n’es pas arrivé après nous toi hihi…<br><br>
+										<strong class="name-cat">Misa :</strong>
+										Qu’est-ce que tu insinue comme ça ?<br><br>
+										<strong class="name-cat">Yuki :</strong>
+										Oh rien rien  XD<br><br>
+										<strong class="name-cat">Misa :</strong>
+										Je te conseil d’aller dormir avant que je te mange…<br><br>
+										<strong class="name-cat">Yuki :</strong>
+										Euh J’y vais à demain !!!! Bonne nuit à tous !!!<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="carousel-item">
+						<div class="flex">
+							<a href="{{path('story_perfection_plan')}}" class="btn button">Perfection du plan</a>
+						</div>
+						<div class="flex">
+							<img class="misa-navbar" src="{{ asset('img/misaGif.gif') }} " alt=""></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,793 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Perfection du plan
+{% endblock %}
+
+{% block body %}
+
+	<div class="bg-black">
+		<div class="container-fluid">
+			<h2 class="col-12 col-md-12 col-lg-12 p-4 mt-5">
+				Perfection du plan :</h2>
+			<div id="carousel-story" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+				<div
+					class="carousel-indicators"><!-- bouton généré en javascript par rapport au nombre de carousel-item -->
+				</div>
+				<div class="carousel-inner">
+
+					<div class="carousel-item active">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/1.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text">
+										[Le lendemain au soir]
+										<br><br>
+										<strong class="name-cat">Misa :</strong>
+										Parfait on vous attendait pour finir l’élaboration de notre plan !
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/2.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Je commence ! Avec Donna, nous avons remarqué que Maman disparait toujours aux alentours de 20h, on pense qu’il doit y avoir une pièce cachée pour faire ses rapports aux démons ! Je pense l’avoir localisé.
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/3.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										je vais vous montrer !
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/4.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Avec Donna, on a mesuré les murs au niveau de sa chambre et une fois de chaque côté, on s’est rendu compte que la fin du mur intérieur de la chambre de Maman n’était pas la fin du mur extérieur ! Conclusion ?!
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/5.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Misa :</strong>
+										Il y a bien une pièce cachée à ce niveau ! Bien joué vous deux ! Très bien il faut savoir ce qu’il y a dedans et si ça peut éventuellement nous servir pour nous échapper !
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/6.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Misa :</strong>
+										Humm Rufus, tu y vas !<br><br>
+										<strong class="name-cat">Rufus :</strong>
+										Quoi ? pourquoi moi ?<br><br>
+										<strong class="name-cat">Misa :</strong>
+										Parce que tu viens d’arriver dans le groupe et que tu dois faire des preuves héhé.<br><br>
+										<strong class="name-cat">Rufus :</strong>
+										Ok c’est bon j’ai compris !
+
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/7.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+
+										<strong class="name-cat">Donna :</strong>
+										Je vais l’accompagner pour être sûr que ça se passe bien !<br><br>
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/8.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Donna :</strong>
+										A tout à l’heure !
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/9.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Rufus :</strong>
+										C’est la porte de la chambre de Maman … Rah je flippe !
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/10.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Donna :</strong>
+										Courage je suis avec toi !
+
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/11.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Rufus :</strong>
+										D’après le plan de Pumpkin, il devrait y avoir un passage par ici mais je trouve rien,
+
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/12.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Donna :</strong>
+										Regarde au dessus, on voit bien qu’il y a un trou derrière !
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/13.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Rufus :</strong>
+										Ah c’est vrai bien joué !
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/14.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Donna :</strong>
+										D’après ce que je vois si je pousse cette armoire vers le mur et le trou je devrais …<br><br>
+										<strong class="name-cat">Rufus :</strong>
+										Waaa, cette pièce existe bien !
+
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/15.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Rufus :</strong>
+										Merde c’est fermé à clé !<br><br>
+										<strong class="name-cat">Rufus :</strong>
+										Bon Misa veut que je fasse mes preuves non ? Je ne peux pas revenir sans avoir vu ce qu’il y avait dedans, attends-moi ici j’arrive !
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/16.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Rufus :</strong>
+										Oups pardon Maman !
+										<br><br>
+										<strong class="name-cat">Maman :</strong>
+										Attention quand tu cours la prochaine fois !
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/17.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Rufus :</strong>
+										J’ai réussi Donna ! J’ai fait en sortes de bousculer Maman pour lui faire croire que c’était accidentel ….
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/18.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Rufus :</strong>
+										Et voilà !!<br><br>
+										<strong class="name-cat">Donna :</strong>
+										Mais c’était super risqué !!!<br><br>
+										<strong class="name-cat">Rufus :</strong>
+										ça va j’ai réussi non ?
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/19.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Rufus :</strong>
+										ça y est, on l’a ouverte… On y va !
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/20.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Donna :</strong>
+										Tu devrais refermer derrière nous, si quelqu’un rentre on se ferait immédiatement griller<br><br>
+										<strong class="name-cat">Rufus :</strong>
+										Ouai tu as raison ^^ Et hop !
+
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/21.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Donna :</strong>
+										Rien dans cette armoire … Pourtant dans une pièce secrète il devrait y avoir des choses spéciales non …
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/22.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Rufus :</strong>
+										Regarde Donna, j’ai trouvé une trappe ! Descendons !
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/23.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Rufus :</strong>
+										Regarde là-bas…
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/22.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Rufus :</strong>
+										Regarde Donna, j’ai trouvé une trappe ! Descendons !
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/24.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Donna :</strong>
+										Oh c’est un transmetteur ! ça veut dire qu’elle communique bien avec des gens de l’extérieur ! On en a vu assez, il faut y aller avant qu’on se fasse repérer !
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/25.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Donna :</strong>
+										C’est bon la voie est libre je pense !
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/26.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Donna :</strong>
+										Non en fait ! Quelqu’un vient de rentrer dans le bureau de Maman !!!
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/27.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+
+										<strong class="name-cat">Maman :</strong>
+										……
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/28.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Maman :</strong>
+										(ça a bougé non ?)
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/29.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Maman :</strong>
+										……
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/30.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Donna :</strong>
+										Oh non, on est fichu !
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/31.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Maman :</strong>
+										……
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/32.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										[Un enfant rentre dans la pièce]<br><br>
+										<strong class="name-cat">Maman :</strong>
+										Hey qui t’as permis de rentrer comme ça toi ?
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/33.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										Petit garçon : J’ai trouvé ça par terre, c’est à toi Maman non ?
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/34.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Maman :</strong>
+										Quoi ?!
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/35.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Maman :</strong>
+										(L’ai-je vraiment fait tomber ?)
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/36.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Maman :</strong>
+										Effectivement, je te remercie beaucoup mon petit bout ^^<br><br>
+										<strong class="name-cat">Maman :</strong>
+										Humm… Aller c’est bientôt l’heure de manger non ? Tu m’accompagnes pour préparer le repas ? Puisque tu as trouvé ma clé je te laisse choisir le dessert 😊
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/37.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										[Maman sort du bureau]
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/38.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Misa :</strong>
+										Alors vous avez trouvé quelques choses ?<br><br>
+										<strong class="name-cat">Donna :</strong>
+										De justesse mais oui, on a pu trouver et rentrer dans la pièce secrète !<br><br>
+										<strong class="name-cat">Misa :</strong>
+										Et personne ne vous a vu ?<br><br>
+										<strong class="name-cat">Donna :</strong>
+										Je ne crois pas non, Rufus a fait en sorte qu’un petit ramène la clé à Maman si Maman rentrait dans le bureau et je dois dire que sans cette idée elle nous aurait surpris dans la pièce…<br><br>
+										<strong class="name-cat">Misa :</strong>
+										Très bien, venez on va s’assoir pour que vous nous racontiez ce que vous avez vu.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/39.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Alors ?! Racontez-nous tout !
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/40.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Je vois, donc on avait bien vu juste à propos de cette pièce.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/41.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Donna :</strong>
+										Oui, il n’y avait pas grand-chose d’intéressant, il n’y a qu’une seule chose, c’est un transmetteur, elle doit s’en servir pour communiquer avec l’extérieur…
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/42.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Yuki :</strong>
+										(Et dire que c’est la tortue de l’aquarium, moi qui me plaignais de marcher sur deux pattes, je n’imagine pas le choc et l’adaptation qu’elle a dû subir …).
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap14/43.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Bon boulot en tout cas, le jour de notre évasion on volera le transmetteur, Maman ne pourra pas communiquer avec l’extérieur et ça nous sera peut-être utile ! Demain, on aura tous une mission !<br><br>
+										<strong class="name-cat">Misa :</strong>
+										En effet, il faut que nous voyions ce qu’il y a derrière le mur, donc demain pendant que je distrais Maman, Pumpkin et Yuki iront aux murs pour l’escalader.<br><br>
+										<strong class="name-cat">Donna :</strong>
+										Et nous ?<br><br>
+										<strong class="name-cat">Misa :</strong>
+										Si je n’arrive pas à la distraire, je vous ferais signe d’une fenêtre pour que vous puissiez aller prévenir Yuki et Pumpkin afin qu’ils reviennent en vitesse. On se retrouve demain devant le bâtiment.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="carousel-item">
+						<div class="flex">
+							<a href="{{path('story_diversion')}}" class="btn button">La diversion</a>
+						</div>
+						<div class="flex">
+							<img class="misa-navbar" src="{{ asset('img/misaGif.gif') }} " alt=""></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
