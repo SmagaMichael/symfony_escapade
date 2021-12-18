@@ -9,6 +9,11 @@
     padding: 0;
 }
 
+@font-face{
+    font-family: "Merriweather";
+    src: url("../police/Merriweather/Merriweather-Regular.ttf");
+}
+
 .container-meteo {
     display: flex;
     justify-content: center;
@@ -18,7 +23,7 @@
     height: auto;
     margin: 4rem auto 0;
     position: relative;
-
+    font-family: "Merriweather";
 }
 .night-container{
     background: linear-gradient(45deg, #10b0b6, #000000);
@@ -174,11 +179,10 @@
 div.flash-info {
     width:100%;
     overflow:hidden;
-    background-color: #2F5168;
+    background: linear-gradient(#000000, #2738f4);
     height: auto;
     border: 2px solid gray;
-    font-size: 1.5em;
-    font-family: "Agency FB";
+    font-size: 15px;
     color: #E4F6F8;
   }
   div.slide-right p {

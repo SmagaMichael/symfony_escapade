@@ -95,12 +95,13 @@ function AppelAPI(long, lat) {
 
             imgIcone.src = `img/meteo/AllIcone/${resultatsAPI.current.weather[0].icon}.svg`
 
-            if(resultatsAPI.current.dt < resultatsAPI.current.sunset){
-                console.log('il fait nuit')
+            if (resultatsAPI.current.dt > resultatsAPI.current.sunset) {
+                // console.log('il fait nuit')
                 $('.container-meteo').removeClass('light-container').addClass('night-container');
                 $('.info-current').removeClass('info-current-light').addClass('info-current-night');
-            }else{
-                console.log('il fait jour')
+            } else if (resultatsAPI.current.dt < resultatsAPI.current.sunset
+                && resultatsAPI.current.dt > resultatsAPI.current.sunrise) {
+                // console.log('il fait jour')
                 $('.container-meteo').removeClass('night-container').addClass('light-container');
                 $('.info-current').removeClass('info-current-night').addClass('info-current-light');
             }
@@ -118,17 +119,17 @@ function AppelAPI(long, lat) {
 // animation flash info
 
 var info = [
-'<p>Il n\'y a plus de croquette ! Alerte générale!</p>',
-'<p>Michaël aime à la folie sa petite chérie .</p>',
-'<p>Yuki va t\'il enfin se venger de Pumpkin ?</p>',
-'<p>Chloé a encore ramené des fleurs miam !</p>',
-'<p>Message de vos petits chats préférés : </p>',
-'<p>Pumpkin : Quelqu\'un pour jouer ? Aller !!! </p>',
-'<p>Yuki : Oh non pas Pumpkin ! Au secours !</p>',
-'<p>Misa (moi) : Je vous aime chers maîtres <3</p>',
-'<p>Fin de transmission c\'était votre Misa !</p>',
-'<p>A vous les miaous ! Euh les studios !!</p>',
-'<p>PS: Venez me chercher, il pleut ici ... FIN </p>',
+    '<p>Il n\'y a plus de croquette ! Alerte générale!</p>',
+    '<p>Michaël aime à la folie sa petite chérie .</p>',
+    '<p>Yuki va t\'il enfin se venger de Pumpkin ?</p>',
+    '<p>Chloé a encore ramené des fleurs miam !</p>',
+    '<p>Message de vos petits chats préférés : </p>',
+    '<p>Pumpkin : Quelqu\'un pour jouer ? Aller !!! </p>',
+    '<p>Yuki : Oh non pas Pumpkin ! Au secours !</p>',
+    '<p>Misa (moi) : Je vous aime chers maîtres <3</p>',
+    '<p>Fin de transmission c\'était votre Misa !</p>',
+    '<p>A vous les miaous ! Euh les studios !!</p>',
+    '<p>PS: Venez me chercher, il pleut ici ... FIN </p>',
 ];
 var index = 0;
 
@@ -149,7 +150,7 @@ function change_right() {
 }
 
 function to_left() {
-setInterval(change_left, 5000);
+    setInterval(change_left, 5000);
 };
 
 function to_right() {
