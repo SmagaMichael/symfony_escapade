@@ -1,0 +1,449 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Surprise
+{% endblock %}
+
+{% block body %}
+
+	<div class="bg-black">
+		<div class="container-fluid">
+			<h2 class="col-12 col-md-12 col-lg-12 p-4 mt-5">
+				Surprise :</h2>
+			<div id="carousel-story" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+				<div
+					class="carousel-indicators"><!-- bouton généré en javascript par rapport au nombre de carousel-item -->
+				</div>
+				<div class="carousel-inner">
+
+					<div class="carousel-item active">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/1.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text">
+										[Depuis que nous nous étions échappés, il s’était environ deux mois, deux mois que nous vivions comme ça, se rapprochant de notre but jour après jour et puis un beau jour, alors que nous arrivions à destination…]<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Oh mon dieu… c’est impossible…
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/2.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Yuki :</strong>
+										Bonjour Pumpkin, bonjour Misa.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/3.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Yuki !!!!!!!! C’est vraiment toi ?
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/4.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Yuki :</strong>
+										Bien-sûr que oui 😊
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/5.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Tu nous à manquer crétin !<br><br>
+										<strong class="name-cat">Yuki :</strong>
+										Vous m’avez aussi manqué…
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/6.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Mais qu’est-ce que tu fais ici ? <br><br>
+										[Misa – Sauf qu’à ce moment-là, je ne l’ai pas laissé répondre]
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/7.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Misa :</strong>
+										Imbécile !
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/8.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Yuki :</strong>
+										Je suppose que je la mérite…
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/9.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Misa :</strong>
+										Tu sais dans quel état j’étais après ta disparition ? La prochaine fois c’est moi qui te tue…
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/10.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Misa :</strong>
+										Venez là, on est enfin réuni !
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/11.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text "></p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/12.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Misa :</strong>
+										Regardez qui on ramène !
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/13.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Donna :</strong>
+										Yuki !!!
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/14.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Enfants :</strong>
+										Pumpkin et Misa ont ramené Yuki !!! Yuki est ici !!
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/15.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Enfants :</strong>
+										Tu nous as manqué Yuki ! C’est vrai que tu t’es sacrifié ?<br><br>
+										<strong class="name-cat">Yuki :</strong>
+										Je suis content de tous vous revoir hihi 😊
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/16.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Misa :</strong>
+										Alors qu’est-ce que tu fichais ici ? Et qu’est-ce qu’il t’est arrivé ? <br><br>
+										[Pumpkin raconte ce que Sonju leur a raconté sur le test et sur le sort de Yuki]
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/17.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Yuki :</strong>
+										Je vois, à vrai dire au début je n’ai rien compris, je suis arrivé à la porte, les démons m’attendaient pour s’occuper de moi, sauf qu’au moment où l’un d’eux m’a attrapé avec ses griffes, poufff je me suis retrouvé ailleurs. J’ai survécu en me cachant par si par-là, j’écouté les rumeurs et si je me faisais repérer, si j’étais en danger je me volatilisais à nouveau en sécurité.<br><br>
+
+										<strong class="name-cat">Yuki :</strong>
+										A force d’écouter aux portes, j’ai entendu dire qu’il y avait un portail vers notre monde pas loin d’ici, ensuite votre évasion à fait de grand bruit dans le monde des démons, j’ai donc su que vous aviez réussi à vous échapper, depuis j’erre tous les jours dans les parages essayant de tomber sur vous. Et aujourd’hui vous êtes enfin arrivé ! Je suis tellement heureux !
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/18.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Misa :</strong>
+										Donc tu es devenu invincible par rapport aux démons ? :o<br><br>
+
+										<strong class="name-cat">Yuki :</strong>
+										Invincible je ne sais pas, mais en tout cas ils ne peuvent ni me toucher, et donc m’attraper etc..<br><br>
+
+										<strong class="name-cat">Misa :</strong>
+										C’est ce que je dis donc tu es invincible !<br><br>
+
+										<strong class="name-cat">Yuki :</strong>
+										Et vous ? Que vous est-il arrivé ? <br><br>
+										
+										[Pumpkin raconte à Yuki tout ce qu’il a manqué depuis qu’ils se sont séparés]<br><br>
+
+										<strong class="name-cat">Yuki :</strong>
+										Wooo, vous avez vécu tellement de choses depuis comparé à moi ! J’ai bien fait de me sacrifier au final, je serais surement mort dans une des situations que vous avez vécues ^^
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/19.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										[Misa – A ce moment précis, j’ai voulu le taper, je ne vous le cache pas…]
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/20.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Yuki :</strong>
+										Je vois donc j’ai réussi ce fameux ‘’test’’ et depuis les démons n’ont plus d’emprise sur moi.<br><br>
+
+										<strong class="name-cat">Pumpkin :</strong>
+										C’est ça, on pensait que tu serais reparti dans notre monde mais on était sûr de rien. D’après Sonju, une fois le test accomplis, les chats devaient automatiquement repartir dans leur famille, mais bon comme on est venu par nous-même, on doit surement repartir de la même façon.<br><br>
+
+										<strong class="name-cat">Yuki :</strong>
+										Et donc, tu es devenu ami avec une fille démon ?
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/21.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Oui ! Elle s’appelle Mujika, on s’est direct bien entendu !<br><br>
+
+										<strong class="name-cat">Yuki :</strong>
+										Pas étonnant de ta part, si y’en a bien un qui pouvait s’entendre avec des démons s’est bien toi !<br><br>
+
+										<strong class="name-cat">Pumpkin :</strong>
+										ça veut dire quoi ça ?!<br><br>
+
+										<strong class="name-cat">Yuki :</strong>
+										Oh rien du tout hihi 😊<br><br>
+
+										<strong class="name-cat">Pumpkin :</strong>
+										Mouai… Quoi qu’il en soit on rejoint le portail demain !<br><br>
+										<strong class="name-cat">Yuki :</strong>
+										Vous savez où il est ?
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/22.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Misa :</strong>
+										Bien-sûr, tu nous prends pour qui ? héhé.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap26/23.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Repose-toi bien, demain on rentre chez nous !<br><br>
+										<strong class="name-cat">Yuki :</strong>
+										D’accord, à demain !
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex">
+							<a href="{{path('story_operation_evasion')}}" class="btn button">Opération évasion ultime</a>
+						</div>
+						<div class="flex">
+							<img class="misa-navbar" src="{{ asset('img/misaGif.gif') }} " alt=""></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

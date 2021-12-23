@@ -1,0 +1,536 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Les révélations de Sonju
+{% endblock %}
+
+{% block body %}
+
+	<div class="bg-black">
+		<div class="container-fluid">
+			<h2 class="col-12 col-md-12 col-lg-12 p-4 mt-5">
+				Les révélations de Sonju :</h2>
+			<div id="carousel-story" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+				<div
+					class="carousel-indicators"><!-- bouton généré en javascript par rapport au nombre de carousel-item -->
+				</div>
+				<div class="carousel-inner">
+
+					<div class="carousel-item active">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/1.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text">
+										[Après le repas…]
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/2.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Sonju :</strong>
+										Vous êtes encore debout vous deux ?
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/3.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										On peut venir te parler ?
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/4.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Sonju :</strong>
+										Si vous voulez.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/5.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Nous sommes désolés … Désolé de vous avoir accusé alors que vous nous avez sauvé…<br><br>
+										<strong class="name-cat">Misa :</strong>
+										On croyait que tous les démons mangeaient des humains…
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/6.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Sonju :</strong>
+										Vous vous méprenez sur ce monde….<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										C’est à dire ?<br><br>
+										<strong class="name-cat">Sonju :</strong>
+										Vous allez comprendre…
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/7.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Sonju :</strong>
+										En tout cas, ça faisait longtemps qu’il n’y avait eu personne pour réussir ce test.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/8.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Misa :</strong>
+										Comment ça « CE TEST » ?!<br><br>
+										<strong class="name-cat">Sonju :</strong>
+										Tenez…
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/9.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Sonju :</strong>
+										Je vais vous raconter une histoire…
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/10.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Misa :</strong>
+										Merci…
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/11.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Sonju :</strong>
+										Par où commencer… Tout d’abord sachez que Mujika et moi sommes au courant que vous êtes 2 chats.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/12.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Misa :</strong>
+										Ah bon ?
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/13.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Sonju :</strong>
+										Oui.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/14.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Misa :</strong>
+										Et donc ce test ?<br><br>
+										<strong class="name-cat">Sonju :</strong>
+										J’y viens…
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/15.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Sonju :</strong>
+										Il y a bien longtemps, les chats étaient vénérés comme des dieux par les humains surtout à un certain endroit que l’on appelle l’Egypte, il y avait tout un culte autour de votre espèce, les humains vous glorifiez et priez en vos noms, il y avait même des chants sur les chats tel que « Tout le monde veut devenir un cat », ainsi les chats reconnaissants des louanges faites par les humains les comblaient en retour de chance et d’amour dans leur vie.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/16.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Sonju :</strong>
+										Seulement, ce culte disparu au fil des centaines d’années, rabaissant les chats au niveau d’animaux de compagnies… Le dieu des chats était si triste et en colère…
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/17.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Attends, désolé de t’interrompre mais… Le dieu des chats existe vraiment ?<br><br>
+										<strong class="name-cat">Sonju :</strong>
+										Bien-sûr, pourquoi ? Tu ne savais pas ?<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										C’est que Michaël, l’a parfois évoqué quand on faisait une bêtise, en nous disant que le roi des petits chats allait nous punir !<br><br>
+										<strong class="name-cat">Sonju :</strong>
+										Michaël ?<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Oui, c’est notre cher maître !<br><br>
+										<strong class="name-cat">Sonju :</strong>
+										D’accord.
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/18.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Sonju :</strong>
+										Donc je reprends, le dieu des chats, ou Roi des chats si vous préférez, était si triste et en colère qui lança une malédiction aux humains, si jamais un humain ne se montrait pas gentil avec un chat, si un humain venait à mal s’occuper de son chat, s’il le bâtait etc… Alors cet humain n’aurait plus de chance dans la vie de tous les jours mais aussi en amour.
+																				
+																				Mais il ne s’est pas arrêté là, le roi des chats avaient puni les humains certes, mais il se dit aussi que les chats avaient aussi leur part de responsabilité, il considérait que si les chats avaient fait ce qu’il fallait pour conserver leur grandeur, les humains auraient continué à les louer.
+																				
+																				C’est donc dans sa logique, qu’il a eu l’idée de créer une multitude de test pour tous les chats, afin qu’ils puissent prouver eux aussi à quel point ils sont dignes d’avoir une famille aimante qui s’occupe bien d’eux. Le Roi des chats, n’ayant plus rien à perdre est venu dans le monde des démons afin de leur laisser gérer les tests, ceux que les démons furent.
+																				
+																				Dans ces tests les chats devaient montrer compassion, amour, tendresse, gentillesse, empathie, il devait résoudre des énigmes en tout genre, s’entraider toutes ces qualités que l’on retrouvait dans chaque chat au temps du Roi des chats. Tout ceci avait pour mission de restaurer la grandeur des chats, une fois le test accompli, les chats seraient retournés dans leurs familles où ils pourraient apporter de nouveau la chance à leurs maîtres ainsi qu’augmenter leur amour l’un pour l’autre afin qu’ils puissent créer une véritable famille. Malheureusement ces tests étaient compliqués pour les chats et peu réussir, les humains possédant des chats où non continuèrent de se séparer, ce qui remplaça l’amour par la tristesse… Le Roi des chats dépité parti et depuis plus personne ne l’a revu. 
+																				
+																				Avec la disparition du Roi des chats, les démons se servirent des tests afin d’invoquer toutes créatures sous forme d’humains afin de les dévorer en faisant ça beaucoup de démons sont devenus sauvage et sont revenus à leur instinct primaire… Certains d’entre nous n’étions pas d’accord et sommes devenu des sortes de parias.
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/19.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Sonju :</strong>
+										Vous deux, vous avez accompli ce que bon nombre d’animaux avant vous ont raté vous avez dû grandir dans une bonne famille. Par contre, ce que je ne comprends pas c’est le fait que vous soyez là… Les tests ont pris fin, il y a bien longtemps.<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										En fait, on a voulu jeter un sort pour partir à l’aventure pendant que nos maîtres étaient sortis, puis on devait revenir juste après et on est arrivé dans ce monde.<br><br>
+										<strong class="name-cat">Sonju :</strong>
+										Je vois… Avec votre sort vous avez dû réactiver un test, je ne vois que ça…
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/20.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Misa :</strong>
+										Vous voulez dire que mon frère est mort à cause de vos tests débiles !!!<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Misa…
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/21.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Sonju :</strong>
+										Depuis que vous vous êtes enfuis, la rumeur qu’un test est de nouveau en route a très vite circulé et donc j’ai appris certaines choses. Les rumeurs racontent qu’un chat avait réussi le test à sa manière.<br><br>
+										<strong class="name-cat">Misa :</strong>
+										Comment ça ?!!<br><br>
+										<strong class="name-cat">Sonju :</strong>
+										Il parait qu’au moment de se faire avaler, ce chat a mystérieusement disparu des griffes du démon qui allait l’avaler, ce qui à provoquer un énorme coup de stresse dans le monde des démons car la légende veut que si les chats invoqués réussissent le test, cela fermera définitivement toutes invocations dans ce monde. Vous comprenez donc pourquoi les démons ne vous laissent pas faire…
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/22.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Misa :</strong>
+										Yuki est donc vivant ?!<br><br>
+										<strong class="name-cat">Sonju :</strong>
+										Il semblerait en effet, d’après ce qu’il se dit, ce chat a réussis car il s’est sacrifié pour sauver ses amis j’imagine donc que c’est vous, il n’a visiblement pas regretté ce choix jusqu’à la fin, ce qui pour le test se traduisait par une immense gentillesse.
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/23.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Tu entends ça Misa !<br><br>
+										<strong class="name-cat">Misa :</strong>
+										Carrément, c’est bien Yuki ça, jamais un coup griffe, jamais un coup de patte aussi douce qu’une princesse !
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/24.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Sonju :</strong>
+										Par contre je ne sais pas s’il est quelques parts dans ce monde ou s’il est reparti dans le vôtre…<br><br>
+										<strong class="name-cat">Misa :</strong>
+										On s’en fou de ça ! Mon frère est vivant et où qu’il soit j’irais le chercher !<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Je suis avec toi Misa, on va aller le retrouver ! On va l’engueuler pour s’être sacrifier puis après lui faire d’énormes câlins !
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/25.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Sonju :</strong>
+										Je suis content que cette nouvelle vous réjouisse, cependant je pense que pour vous ce n’est pas encore fini, il y a une porte à atteindre, c’est un passage entre nos deux mondes, vous devrez survivre jusque-là seuls, Mujika et moi-même ne pouvons pas venir avec vous, mais vous pouvez rester ici quelques jours, nous vous apprendrons les bases pour survivre ici.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/26.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Pumpkin :</strong>
+										Merci beaucoup Sonju, on avait besoin d’entendre ça ! D’ailleurs qu’est-ce que tu entends par ‘’ ce qui pour le test se traduisait par une immense gentillesse’’, le test est une personne ?<br><br>
+
+										<strong class="name-cat">Sonju :</strong>
+										Pas vraiment, le test est une sorte de volonté, une magie puissance si tu préfères qui s’active quand les conditions sont remplies.<br><br>
+
+										<strong class="name-cat">Pumpkin :</strong>
+										ça marche !  Ce test on va en faire qu’une bouchée crois-moi ! Pas vrai Misa ?!
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap23/27.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Misa :</strong>
+										Carrément, le Roi des chats n’a qu’à bien se tenir !<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Encore merci Sonju, merci de nous avoir raconté tout ça et d’avoir pris de ton temps pour nous expliquer, depuis qu’on s’est échapper on ne savait pas trop où aller, on errait dans la forêt mais c’est terminé ! On sait quoi faire maintenant, on a eu raison de venir te parler !
+										<br><br>
+										<strong class="name-cat">Misa :</strong>
+										Bonne nuit Sonju, à demain !
+
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="carousel-item">
+						<div class="flex">
+							<a href="{{path('story_nouvelle_vie_quotidienne')}}" class="btn button">Nouvelle vie quotidienne</a>
+						</div>
+						<div class="flex">
+							<img class="misa-navbar" src="{{ asset('img/misaGif.gif') }} " alt=""></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

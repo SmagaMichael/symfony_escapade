@@ -1,0 +1,128 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Fin de l'histoire !
+{% endblock %}
+
+{% block body %}
+
+	<div class="bg-black">
+		<div class="container-fluid">
+			<h2 class="col-12 col-md-12 col-lg-12 p-4 mt-5">
+				Fin de l'histoire ! :</h2>
+			<div id="carousel-story" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+				<div
+					class="carousel-indicators"><!-- bouton généré en javascript par rapport au nombre de carousel-item -->
+				</div>
+				<div class="carousel-inner">
+
+					<div class="carousel-item active">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap32/1.png') }} " class="img" alt="...">
+								<img src="{{ asset('img/chap32/2.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text">
+										[Misa – Et voilà, j’ai fini de vous raconter mon histoire ! Au final tout est bien qui finit bien non ?  D’accord à un moment je m’en suis voulu d’avoir jeté se sort, j’avoue que c’était un peu inconscient, mais voyez-vous ce qui en résulte ?<br><br>
+										
+										-	Donna recommence à patauger dans son aquarium, je pense que ça lui fait du bien de tourner dans sa carapace, après tout c’est une partie d’elle-même quand même. Comme vous ne l’avez jamais vu en vrai, la voici en chair et en écaille ! Je ne vous ai pas menti pendant le récit, elle a bien été sur le dos de Pumpkin vous voyez !
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap32/3.png') }} " class="img" alt="...">
+								<img src="{{ asset('img/chap32/4.png') }} " class="img" alt="...">
+								<img src="{{ asset('img/chap32/5.png') }} " class="img" alt="...">
+								<img src="{{ asset('img/chap32/6.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										-	Pour ma part, j’ai retrouvé mon frère et même si je savais que j’étais attaché à lui je peux vous dire maintenant haut et fort que je l’aime énormément je passerais ma vie à veiller sur lui !<br><br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap32/7.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										-	Mujika a était couronné Reine des démons et Sonju est devenu son garde du corps.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap32/8.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										-	Mujika et Pumpkin peuvent se retrouver quand ils veulent grâce au pouvoir du dieu des chats, vous y croyez-vous le Roi des chats et la Reine des démons ? Nos mondes cours à leurs pertes ._.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap32/9.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										-	Et grâce aux réponses de Pumpkin, à la demande de Michaël et aussi à la réponse de Chloé hein puisqu’elle n’était pas obligée de dire oui, nous sommes à présent encore plus une jolie famille [Fredonne hiiiiiistoire éternelllllllle, rouh rouh rouuuuh rouuuuhhhh rouuuuuhhhhh]  Et cela deviendra maintenant officiel chez les humains, même si à ce niveau je m’en fiche un peu car bah… Je suis un chat ! Mais une chose est sure, eux deux c’est pour la vie !
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap32/10.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										J’espère que mon histoire vous a plus ! Je vous laisse, j’ai un nouveau plan en tête et je dois en parler aux autres ! On ne se refait pas complétement 😉 C’était Misa, votre fidèle chat-rateur, à vous les miaous !]
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					
+
+					<div class="carousel-item">
+						<div class="flex">
+							<a href="{{path('home')}}" class="btn button">Retour à l'accueil</a>
+						</div>
+						<div class="flex">
+							<img class="misa-navbar" src="{{ asset('img/misaGif.gif') }} " alt=""></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

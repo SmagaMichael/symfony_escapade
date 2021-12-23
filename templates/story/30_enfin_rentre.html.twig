@@ -1,0 +1,102 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Enfin rentré
+{% endblock %}
+
+{% block body %}
+
+	<div class="bg-black">
+		<div class="container-fluid">
+			<h2 class="col-12 col-md-12 col-lg-12 p-4 mt-5">
+				Enfin rentré :</h2>
+			<div id="carousel-story" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+				<div
+					class="carousel-indicators"><!-- bouton généré en javascript par rapport au nombre de carousel-item -->
+				</div>
+				<div class="carousel-inner">
+
+					<div class="carousel-item active">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap30/1.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text">
+										<strong class="name-cat">Yuki :</strong> ça y est on est bien rentré !
+										<strong class="name-cat">Misa :</strong>
+										Je crois que je vais dormir un mois entier là !<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Yuki tu m’écrases ! <br><br>
+										
+										[Misa – C’est juste après que Pumpkin nous a raconté ce qui lui était arrivé avant en passant le portail, j’avoue que j’étais assez jaloux sur le coup, mais bon sans lui nous ne serions pas rentrés à la maison donc je fais avec]
+
+										<strong class="name-cat">Misa :</strong>
+										Et du coup c’est cette boite que l’on doit donner à nos maîtres ?<br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Oui, le Dieu des chats m’a dit que ça servirait à faire qu’on sorte qu’on soit encore plus une famille…<br><br>
+										<strong class="name-cat">Yuki :</strong>
+										Mais on la donne à qui ? Michaël ? Chloé ? Au deux en même temps ?<br><br>
+										<strong class="name-cat">Misa :</strong>
+										Bah dès que l’occasion se présente, on la donnera à l’un d’eux, on est redevenu des chats hein donc on ne peut pas arriver en disant « Hey aux faites, on doit vous donner ça », c’est impossible donc, on voit lequel arrive en premier et on attire son attention dessus. Ça sera surement Michaël façon vu les horaires de Chloé.
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap30/2.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										[Peu de temps après Michaël est bien rentré chez nous, notre dernière mission commençait maintenant]<br><br>
+										
+										[La première étape était que Yuki devait aller sur le bureau de Michaël et l’inciter à jouer, on sait très bien qu’une provocation comme ça fonctionnerait puisqu’avant notre aventure, Yuki était toujours stressé et pas vraiment approchable…]
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap30/3.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										[Misa - Notre plan à bien-sûr fonctionné, après tout c’était le mien, Pumpkin a donc poussé la boite du bout de son museau en direction de notre maître pendant que l’on jouait avec lui]
+<br><br>
+										<strong class="name-cat">Michaël :</strong>
+										Tiens, mais c’est quoi cette boite les petits chats ? C’est vous qui l’avez trouvé ? Qu’est-ce que c’est ? <br><br>
+										[Misa – Michaël ouvra la boite et regarda les petits chats]<br><br>
+										<strong class="name-cat">Michaël :</strong>
+										Vous aussi vous en avez envie ? Très bien, j’ai compris 😊
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="carousel-item">
+						<div class="flex">
+							<a href="{{path('story_histoire_eternelle')}}" class="btn button">Histoire éternelle...</a>
+						</div>
+						<div class="flex">
+							<img class="misa-navbar" src="{{ asset('img/misaGif.gif') }} " alt=""></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
