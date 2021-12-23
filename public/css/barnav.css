@@ -72,6 +72,8 @@
     /* overflow: scroll; */
     background-color: black;
     border: 1px solid green;
+    max-height: 80vh;
+    overflow-y: auto;
 }
 .dropdown-menu{
     background-color: black !important;
