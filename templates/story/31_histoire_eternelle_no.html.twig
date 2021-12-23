@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Histoire éternelle
+{% endblock %}
+
+{% block body %}
+
+	<div class="bg-black">
+		<div class="container-fluid">
+			<h2 class="col-12 col-md-12 col-lg-12 p-4 mt-5">
+				Histoire éternelle :</h2>
+			<div id="carousel-story" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+				<div
+					class="carousel-indicators"><!-- bouton généré en javascript par rapport au nombre de carousel-item -->
+				</div>
+				<div class="carousel-inner">
+
+					<div class="carousel-item active">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap31/pumpkin.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text">
+                                    [Misa - Humm, je crois que tu n'as pas cliqué au bon endroit...] <br><br>
+										<strong class="name-cat">Pumpkin :</strong>
+										Quoi ? Après toute cette aventure qu'on a vécu ? Aller dis oui !! Mon maître t'aime tellement que tu ne peux pas refuser ! C'est le roi des chats qui te l'ordonne !  
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap31/yuki.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Yuki :</strong>
+										Impossible que tu dises autre choses que oui ! C'est vrai parfois même trop souvent j'ai peur de lui mais c'est parce qu'il est trop imprévisible mais dans le bon sens ! 
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex wrap">
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<img src="{{ asset('img/chap31/misa.png') }} " class="img" alt="...">
+							</div>
+							<div class="col-11 col-md-8 col-lg-5 flex">
+								<div class="card-body">
+									<p class="card-text ">
+										<strong class="name-cat">Misa :</strong>
+										Je viens vraiment de raconter une histoire de folie pour un ''non'' ? Vraiment ? Je pense que tu as mal cliqué et tu t'es forcément trompé de bouton, heureusement j'ai pensé à tout ! Comme je sais que tu es maladroite, je t'ai préparé une nouvelle chance de dire oui ! Je ne met pas l'option non, après tout pourquoi tu dirais non ? Michaël nous aimes tous énormément, même moi il a su me conquérir alors que c'étais pas gagné ! Aller je te laisse répondre ! 
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="flex">
+							<a href="{{path('story_histoire_eternelle2')}}" class="btn button">Oui ! </a>
+						</div>
+						<div class="flex">
+							<img class="misa-navbar" src="{{ asset('img/misaGif.gif') }} " alt=""></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

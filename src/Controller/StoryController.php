@@ -261,6 +261,21 @@ class StoryController extends AbstractController
         ]);
     }
 
+    #[Route('/story/histoire_eternelle2', name: 'story_histoire_eternelle2')]
+    public function histoire_eternelle2(): Response
+    {
+        return $this->render('story/31_histoire_eternelle2.html.twig', [
+            'controller_name' => 'StoryController',
+        ]);
+    }
+    #[Route('/story/histoire_eternelle_no', name: 'story_histoire_eternelle_no')]
+    public function histoire_eternelle_no(): Response
+    {
+        return $this->render('story/31_histoire_eternelle_no.html.twig', [
+            'controller_name' => 'StoryController',
+        ]);
+    }
+
     #[Route('/story/fin', name: 'story_histoire_fin')]
     public function fin(): Response
     {
