@@ -165,18 +165,109 @@ class StoryController extends AbstractController
         ]);
     }
 
+    #[Route('/story/decouverte', name: 'story_decouverte_du_monde')]
+    public function decouverte(): Response
+    {
+        return $this->render('story/20_decouverte_du_monde_ext.html.twig', [
+            'controller_name' => 'StoryController',
+        ]);
+    }
 
+    #[Route('/story/reveil', name: 'story_reveil')]
+    public function reveil(): Response
+    {
+        return $this->render('story/21_le_reveil.html.twig', [
+            'controller_name' => 'StoryController',
+        ]);
+    }
 
+    #[Route('/story/sonju_et_mujika', name: 'story_sonju_et_mujika')]
+    public function sonju_et_mujika(): Response
+    {
+        return $this->render('story/22_sonju_et_mujika.html.twig', [
+            'controller_name' => 'StoryController',
+        ]);
+    }
 
+    #[Route('/story/revelation_de_sonju', name: 'story_revelation_de_sonju')]
+    public function revelation_de_sonju(): Response
+    {
+        return $this->render('story/23_revelation_de_sonju.html.twig', [
+            'controller_name' => 'StoryController',
+        ]);
+    }
 
+    #[Route('/story/nouvelle_vie_quotidienne', name: 'story_nouvelle_vie_quotidienne')]
+    public function nouvelle_vie_quotidienne(): Response
+    {
+        return $this->render('story/24_nouvelle_vie_quotidienne.html.twig', [
+            'controller_name' => 'StoryController',
+        ]);
+    }
 
+    #[Route('/story/vers_le_portail', name: 'story_vers_le_portail')]
+    public function vers_le_portail(): Response
+    {
+        return $this->render('story/25_vers_le_portail.html.twig', [
+            'controller_name' => 'StoryController',
+        ]);
+    }
 
+    #[Route('/story/surprise', name: 'story_surprise')]
+    public function surprise(): Response
+    {
+        return $this->render('story/26_surprise.html.twig', [
+            'controller_name' => 'StoryController',
+        ]);
+    }
 
+    #[Route('/story/operation_evasion', name: 'story_operation_evasion')]
+    public function operation_evasion(): Response
+    {
+        return $this->render('story/27_operation_evasion.html.twig', [
+            'controller_name' => 'StoryController',
+        ]);
+    }
 
+    #[Route('/story/enfin_libre', name: 'story_enfin_libre')]
+    public function enfin_libre(): Response
+    {
+        return $this->render('story/28_enfin_libre.html.twig', [
+            'controller_name' => 'StoryController',
+        ]);
+    }
 
+    #[Route('/story/entrevue_celeste', name: 'story_entrevue_celeste')]
+    public function entrevue_celeste(): Response
+    {
+        return $this->render('story/29_entrevue_celeste.html.twig', [
+            'controller_name' => 'StoryController',
+        ]);
+    }
 
+    #[Route('/story/enfin_rentre', name: 'story_enfin_rentre')]
+    public function enfin_rentre(): Response
+    {
+        return $this->render('story/30_enfin_rentre.html.twig', [
+            'controller_name' => 'StoryController',
+        ]);
+    }
 
+    #[Route('/story/histoire_eternelle', name: 'story_histoire_eternelle')]
+    public function histoire_eternelle(): Response
+    {
+        return $this->render('story/31_histoire_eternelle.html.twig', [
+            'controller_name' => 'StoryController',
+        ]);
+    }
 
+    #[Route('/story/fin', name: 'story_histoire_fin')]
+    public function fin(): Response
+    {
+        return $this->render('story/32_fin.html.twig', [
+            'controller_name' => 'StoryController',
+        ]);
+    }
 
 
 
