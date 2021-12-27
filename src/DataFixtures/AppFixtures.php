@@ -30,6 +30,13 @@ class AppFixtures extends Fixture
             ->setPassword($this->hashPassword->hashPassword($user, '!@0105@!'));
         $manager->persist($user);
 
+        $user = new User();
+        $user->setName('user')
+            ->setEmail('user@escapade.fr')
+            ->setRoles(['USER'])
+            ->setPassword($this->hashPassword->hashPassword($user, 'user'));
+        $manager->persist($user);
+
 
         $manager->flush();
     }

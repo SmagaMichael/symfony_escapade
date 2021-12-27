@@ -15,7 +15,10 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ListItemsController extends AbstractController
 {
-    #[Route('/list/items', name: 'list_items')]
+    // #[Route('/list/items', name: 'list_items')]
+     /**
+     * @Route("/list/items", name="list_items")
+     */
     public function buiItem(Request $request, BuyItemRepository $buyItemRepository): Response
     {
 
@@ -45,7 +48,10 @@ class ListItemsController extends AbstractController
     }
 
 
-    #[Route('/list/empty', name: 'list_empty')]
+    // #[Route('/list/empty', name: 'list_empty')]
+    /**
+     * @Route("/list/empty", name="list_empty")
+     */
     public function listEmpty(Request $request, EntityManagerInterface $entityManager): Response
     {
 
@@ -60,7 +66,10 @@ class ListItemsController extends AbstractController
     }
 
 
-    #[Route('/list/remove/{id}', name: 'list_remove_item')]
+    // #[Route('/list/remove/{id}', name: 'list_remove_item')]
+     /**
+     * @Route("/list/remove/{id}", name="list_remove_item")
+     */
     public function removeItem($id, EntityManagerInterface $entityManager, BuyItemRepository $buyItemRepository): Response
     {
 

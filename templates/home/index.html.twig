@@ -3,7 +3,7 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-
+	
 <div class="bg-accueil">
     <div class="container flex">
         <img class="accueil-misa " src=" {{asset('img/accueilMisa.jpg')}} " alt="">
@@ -33,7 +33,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                Bonjour <span class="color-span"><b> {{ app.user.name }} </b></span>, je suis Misa le chat-rateur de l'histoire , je vais t'accompagner tout au long de cette aventure !! <br>
+                Bonjour {% if app.user %}<span class="color-span"><b> {{ app.user.name }} </b></span>{% endif %}, je suis Misa le chat-rateur de l'histoire , je vais t'accompagner tout au long de cette aventure !! <br>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
@@ -56,9 +56,16 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                {% if app.user %}
                 <a href=" {{path('story_introduction')}} " class="btn button-modal-valid">C'est parti !</a>
+
+                {% else %}
+                <P>Connecte toi pour avoir accès à l'histoire ! </P>
+                {% endif %}
             </div>
         </div>
     </div>
 </div>
+					
+
 {% endblock %}
