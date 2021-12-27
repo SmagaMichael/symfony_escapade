@@ -76,7 +76,7 @@ function AppelAPI(long, lat) {
 
 
             for (let n = 0; n < iconParH.length; n++) {
-                iconParH[n].src = `img/meteo/AllIcone/${resultatsAPI.hourly[n * 3].weather[0].icon}.svg`
+                iconParH[n].src = `img/meteo/allIcone/${resultatsAPI.hourly[n * 3].weather[0].icon}.svg`
             }
 
 
@@ -90,10 +90,10 @@ function AppelAPI(long, lat) {
                 tempJoursDiv[m].innerText = Math.trunc(resultatsAPI.daily[m + 1].temp.day) + "°C"
             }
             for (let m = 0; m < 7; m++) {
-                iconParJ[m].src = `img/meteo/AllIcone/${resultatsAPI.daily[m + 1].weather[0].icon}.svg`
+                iconParJ[m].src = `img/meteo/allIcone/${resultatsAPI.daily[m + 1].weather[0].icon}.svg`
             }
 
-            imgIcone.src = `img/meteo/AllIcone/${resultatsAPI.current.weather[0].icon}.svg`
+            imgIcone.src = `img/meteo/allIcone/${resultatsAPI.current.weather[0].icon}.svg`
 
             if (resultatsAPI.current.dt > resultatsAPI.current.sunset) {
                 // console.log('il fait nuit')
