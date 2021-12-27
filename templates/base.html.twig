@@ -32,8 +32,15 @@
 	</head>
 	<body>
 		{# Si on est sur ailleurs que sur la page de connexion alors on affiche la navbar #}
-		{% if (app.request.pathinfo | striptags | slice(1, 5) != "login") %}
+		{% if (app.request.pathinfo | striptags | slice(1, 5) == "") %}
 			{% include "shared/_navbar.html.twig" %}
+		{% elseif (app.request.pathinfo | striptags | slice(1, 5) == "story")%}
+			{% include "shared/_navbar.html.twig" %}
+		{% elseif (app.request.pathinfo | striptags | slice(1, 5) == "meteo")%}
+			{% include "shared/_navbar.html.twig" %}
+		{% elseif (app.request.pathinfo | striptags | slice(1, 4) == "list")%}
+			{% include "shared/_navbar.html.twig" %}
+
 		{% endif %}
 
 

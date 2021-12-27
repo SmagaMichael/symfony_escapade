@@ -1,4 +1,10 @@
+
+
 @media screen and (max-width: 749px) {
+    html{
+        height: 100%;
+    }
+    
     #gato{
         background: url('https://res.cloudinary.com/pastelitos/image/upload/v1610526571/eva/gatito_pushui.svg');
         height: 297px; 
@@ -14,11 +20,32 @@
 
         }
     
-        #luna {
-            visibility: hidden;
-            display: none;
-        
-            }
+    #luna {
+        visibility: hidden;
+        display: none;
+    
+        }
+
+    #muro{
+        position: fixed;
+        bottom: 0;
+        height: 7.30em;
+        width: 100%;
+        background: -moz-linear-gradient(top,  #416663 0%, #0c0207 19%); 
+        background: -webkit-linear-gradient(top,  #416663 0%,#0c0207 19%); 
+        background: linear-gradient(to bottom,  #416663 0%,#0c0207 19%); 
+    
+        }
+
+    #marco{
+        margin: 0 auto;
+        border-radius: 16px;
+        margin-top: 2em;
+        position: relative;
+        position: fixed;
+    width: 100%;
+    bottom: 120px;
+        }
 
 }
 
@@ -52,14 +79,25 @@
         left: 75%;
         }
 
+    #muro{
+        height: 7.30em;
+        width: 100%;
+        background: -moz-linear-gradient(top,  #416663 0%, #0c0207 19%); 
+        background: -webkit-linear-gradient(top,  #416663 0%,#0c0207 19%); 
+        background: linear-gradient(to bottom,  #416663 0%,#0c0207 19%); 
+    
+        }
+
+    #marco{
+        margin: 0 auto;
+        border-radius: 16px;
+        margin-top: 2em;
+        position: relative;
+        }
+
 }
     
-#marco{
-    margin: 0 auto;
-    border-radius: 16px;
-    margin-top: 2em;
-    position: relative;
-    }
+
 
 #edificios{
     background: url('https://res.cloudinary.com/pastelitos/image/upload/v1610526533/eva/edificiosOne_fsg7nx.svg');
@@ -77,14 +115,7 @@
  
     }
 
-#muro{
-    height: 7.30em;
-    width: 100%;
-    background: -moz-linear-gradient(top,  #416663 0%, #0c0207 19%); 
-    background: -webkit-linear-gradient(top,  #416663 0%,#0c0207 19%); 
-    background: linear-gradient(to bottom,  #416663 0%,#0c0207 19%); 
 
-    }
     
 /* Animacion edificios */
 
