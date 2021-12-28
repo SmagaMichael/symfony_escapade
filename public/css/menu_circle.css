@@ -59,9 +59,9 @@
 }
 
 
-  .site-mikie{
-      background-image: url(https://smaga-michael.fr/asset/img/ms2.ico);
-      background-size: 115% 115%;
+  .prise-note{
+      background-image: url('../img/circleButton/plume.jpg');
+      background-size: 160% 160%;
       background-position-x: center;
       background-position-y: center;
   }

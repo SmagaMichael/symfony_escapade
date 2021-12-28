@@ -90,9 +90,13 @@ color: #f8b208 !important;
     text-decoration: none !important;
     text-transform: none !important;
     color: green  !important;
+    border-bottom: 1px solid green;
+    margin: 4px;
 }
 .nav-link:hover{
-    color: green !important;
+    color: orange !important;
+    border-bottom: 1px solid orange;
+
 }
 
 

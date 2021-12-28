@@ -40,6 +40,8 @@
 			{% include "shared/_navbar.html.twig" %}
 		{% elseif (app.request.pathinfo | striptags | slice(1, 4) == "list")%}
 			{% include "shared/_navbar.html.twig" %}
+		{% elseif (app.request.pathinfo | striptags | slice(1, 4) == "note")%}
+			{% include "shared/_navbar.html.twig" %}
 
 		{% endif %}
 
