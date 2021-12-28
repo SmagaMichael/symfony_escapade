@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Prise de note
+{% endblock %}
+
+{% block stylesheets %}
+	{{parent()}}
+	<link rel="stylesheet" href="{{asset('css/note.css')}} ">
+{% endblock %}
+
+{% block body %}
+    {{ form_start(CategoryNoteFormType) }}
+        {{ form_widget(CategoryNoteFormType) }}
+        <button class="btn btn-primary">Ajouter</button>
+    {{ form_end(CategoryNoteFormType) }}
+
+{% endblock %}
+
+
+{% block javascript %}
+
+{% endblock %}
