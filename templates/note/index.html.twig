@@ -9,159 +9,334 @@
 {% endblock %}
 
 {% block body %}
-	<div class="div-note">
-		<div class="container p-5 ">
-			<ul class="nav nav-tabs div-button-category">
-				<li class="nav-item">
-					<a class="nav-link" href="{{path('create_category_note')}}">
-						+ Catégorie</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="{{path('create_note')}}">
-						+ Notes</a>
-				</li>
-			</ul>
-			<ul class="nav nav-tabs div-button-category">
-				{% for category in categories %}
-					<li class="nav-item ">
-						<a data-bs-toggle="tab" class="nav-link button-category-note" href="#{{category.name | slug }}">
-							{{category.name}}</a>
+	{% if is_granted('ROLE_ADMIN') %}
+		<div class="div-note">
+			<div class="container p-5 ">
+				<ul class="nav nav-tabs div-button-category">
+					<li class="nav-item">
+						<a class="nav-link" href="{{path('create_category_note')}}">
+							+ Catégorie</a>
 					</li>
-				{% endfor %}
+					<li class="nav-item">
+						<a class="nav-link" href="{{path('create_note')}}">
+							+ Notes</a>
+					</li>
+				</ul>
+				<ul class="nav nav-tabs div-button-category">
+					{% for category in categories %}
+						<li class="nav-item ">
+							<a data-bs-toggle="tab" class="nav-link button-category-note" href="#{{category.name | slug }}">
+								{{category.name}}</a>
+						</li>
+					{% endfor %}
 
-			</ul>
-			<!-- Tab panes -->
-			<div class="tab-content">
+				</ul>
+				<!-- Tab panes -->
+				<div class="tab-content">
 
-				{% for category in categories %}
-					<div class="tab-pane py-3" id="{{category.name | slug}}">
-						<div class="flex">
-							<h2>{{category.name}}
-							</h2>
-							<a class="btn m-1 btn-trash" data-bs-toggle="modal" data-bs-target="#modal-delete-category-{{category.id}}">
-								<i class="fas fa-trash-alt"></i>
-							</a>
-							<a class="btn m-1 btn-edit" data-bs-toggle="modal" data-bs-target="#modal-edit-category-{{category.id}}">
-								<i class="fas fa-edit"></i>
-							</a>
-						</div>
-						<div
-							class="accordion" id="accordionPanelsStayOpenExample">
-							{# récupération de chaque notes de la catégorie concernée #}
-							{% for note in category.notes %}
-								<div class="accordion-item">
-									<h2 class="accordion-header" id="panelsStayOpen-headingOne">
-										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-{{note.title | slug}}" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-											{{note.title}}
-										</button>
-									</h2>
-									<div id="panelsStayOpen-{{note.title | slug}}" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
-										<div class="accordion-body">
-											<a href="" class="btn btn-trash" data-bs-toggle="modal" data-bs-target="#modal-delete-note-{{note.id}}">
-												<i class="fas fa-trash-alt"></i>
-											</a>
-											<a href="" class="btn btn-edit" data-bs-toggle="modal" data-bs-target="#modal-edit-note-{{note.id}}">
-												<i class="fas fa-edit"></i>
-											</a>
-											<strong>{{note.description}}</strong>
-										</div>
-									</div>
-								</div>
-
-
-								{# modal suppression note #}
-								<div class="modal fade" id="modal-delete-note-{{note.id}}" tabindex="-1" aria-labelledby="modal-delete-note-{{note.id}}" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h5 class="modal-title" id="exampleModalLabel">Suppression de la note
-													{{note.title}}</h5>
-												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-											</div>
-											<div class="modal-body">
-												Etes-vous sûr de bien vouloir supprimer la note
+					{% for category in categories %}
+						<div class="tab-pane py-3" id="{{category.name | slug}}">
+							<div class="flex">
+								<h2>{{category.name}}
+								</h2>
+								<a class="btn m-1 btn-trash" data-bs-toggle="modal" data-bs-target="#modal-delete-category-{{category.id}}">
+									<i class="fas fa-trash-alt"></i>
+								</a>
+								<a class="btn m-1 btn-edit" data-bs-toggle="modal" data-bs-target="#modal-edit-category-{{category.id}}">
+									<i class="fas fa-edit"></i>
+								</a>
+							</div>
+							<div
+								class="accordion" id="accordionPanelsStayOpenExample">
+								{# récupération de chaque notes de la catégorie concernée #}
+								{% for note in category.notes %}
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="panelsStayOpen-headingOne">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-{{note.title | slug}}" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
 												{{note.title}}
-												?
-											</div>
-											<div class="modal-footer">
-												<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-												<a href="{{ path('delete_note', {id: note.id}) }}" class="btn btn-primary">Confirmer</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								{# modal edition note #}
-								<div class="modal fade" id="modal-edit-note-{{note.id}}" tabindex="-1" aria-labelledby="modal-edit-note-{{note.id}}" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h5 class="modal-title" id="exampleModalLabel">Edition de la note
-													{{note.title}}</h5>
-												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-											</div>
-											<div class="modal-body">
-												Etes-vous sûr de bien vouloir éditer la note
-												{{note.title}}
-												?
-											</div>
-											<div class="modal-footer">
-												<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-												<a href="{{ path('edit_note', {id: note.id}) }}" class="btn btn-primary">Confirmer</a>
+											</button>
+										</h2>
+										<div id="panelsStayOpen-{{note.title | slug}}" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+											<div class="accordion-body">
+												<a href="" class="btn btn-trash" data-bs-toggle="modal" data-bs-target="#modal-delete-note-{{note.id}}">
+													<i class="fas fa-trash-alt"></i>
+												</a>
+												<a href="" class="btn btn-edit" data-bs-toggle="modal" data-bs-target="#modal-edit-note-{{note.id}}">
+													<i class="fas fa-edit"></i>
+												</a>
+												<strong>{{note.description}}</strong>
 											</div>
 										</div>
 									</div>
-								</div>
-							{% endfor %}
-						</div>
-					</div>
 
-					{# modal suppression catégorie #}
-					<div class="modal fade" id="modal-delete-category-{{category.id}}" tabindex="-1" aria-labelledby="modal-delete-category-{{category.id}}" aria-hidden="true">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title" id="exampleModalLabel">Suppression de la catégorie
-										{{category.name}}</h5>
-									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-								</div>
-								<div class="modal-body">
-									Etes-vous sûr de bien vouloir supprimer la catégorie
-									{{category.name}}
-									ainsi que les notes se trouvant dans la catégorie ?
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-									<a href="{{ path('delete_category_note', {id: category.id}) }}" class="btn btn-primary">Confirmer</a>
+
+									{# modal suppression note #}
+									<div class="modal fade" id="modal-delete-note-{{note.id}}" tabindex="-1" aria-labelledby="modal-delete-note-{{note.id}}" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLabel">Suppression de la note
+														{{note.title}}</h5>
+													<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+												</div>
+												<div class="modal-body">
+													Etes-vous sûr de bien vouloir supprimer la note
+													{{note.title}}
+													?
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+													<a href="{{ path('delete_note', {id: note.id}) }}" class="btn btn-primary">Confirmer</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									{# modal edition note #}
+									<div class="modal fade" id="modal-edit-note-{{note.id}}" tabindex="-1" aria-labelledby="modal-edit-note-{{note.id}}" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLabel">Edition de la note
+														{{note.title}}</h5>
+													<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+												</div>
+												<div class="modal-body">
+													Etes-vous sûr de bien vouloir éditer la note
+													{{note.title}}
+													?
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+													<a href="{{ path('edit_note', {id: note.id}) }}" class="btn btn-primary">Confirmer</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								{% endfor %}
+							</div>
+						</div>
+
+						{# modal suppression catégorie #}
+						<div class="modal fade" id="modal-delete-category-{{category.id}}" tabindex="-1" aria-labelledby="modal-delete-category-{{category.id}}" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">Suppression de la catégorie
+											{{category.name}}</h5>
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										Etes-vous sûr de bien vouloir supprimer la catégorie
+										{{category.name}}
+										ainsi que les notes se trouvant dans la catégorie ?
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+										<a href="{{ path('delete_category_note', {id: category.id}) }}" class="btn btn-primary">Confirmer</a>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					{# modal edition catégorie #}
-					<div class="modal fade" id="modal-edit-category-{{category.id}}" tabindex="-1" aria-labelledby="modal-edit-category-{{category.id}}" aria-hidden="true">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title" id="exampleModalLabel">Edition de la catégorie
-										{{category.name}}</h5>
-									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-								</div>
-								<div class="modal-body">
-									Etes-vous sûr de bien vouloir éditer la catégorie
-									{{category.name}}
-									?
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-									<a href="{{ path('edit_category_note', {id: category.id}) }}" class="btn btn-primary">Confirmer</a>
+						{# modal edition catégorie #}
+						<div class="modal fade" id="modal-edit-category-{{category.id}}" tabindex="-1" aria-labelledby="modal-edit-category-{{category.id}}" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">Edition de la catégorie
+											{{category.name}}</h5>
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										Etes-vous sûr de bien vouloir éditer la catégorie
+										{{category.name}}
+										?
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+										<a href="{{ path('edit_category_note', {id: category.id}) }}" class="btn btn-primary">Confirmer</a>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				{% endfor %}
+					{% endfor %}
 
+				</div>
 			</div>
 		</div>
-	</div>
+
+	{% else %}
+
+
+		<div class="div-note">
+			<div class="container p-5 ">
+				<ul class="nav nav-tabs div-button-category">
+					<li class="nav-item">
+						<a class="nav-link" href="">
+							+ Catégorie</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="">
+							+ Notes</a>
+					</li>
+				</ul>
+				<ul class="nav nav-tabs div-button-category">
+					{% for i in 1..4 %}
+
+						<li class="nav-item ">
+							<a data-bs-toggle="tab" class="nav-link button-category-note" href="#category-note-{{i}}">
+								Catégorie
+								{{i}}</a>
+						</li>
+					{% endfor %}
+
+					{# <li class="nav-item ">
+												<a data-bs-toggle="tab" class="nav-link button-category-note" href="#category-note-2">
+													Catégorie 2</a>
+											</li>
+											<li class="nav-item ">
+												<a data-bs-toggle="tab" class="nav-link button-category-note" href="#category-note-3">
+													Catégorie 3</a>
+											</li>
+											<li class="nav-item ">
+												<a data-bs-toggle="tab" class="nav-link button-category-note" href="#category-note-4">
+													Catégorie 4</a>
+											</li> #}
+				</ul>
+				<!-- Tab panes -->
+				<div class="tab-content">
+
+					{% for i in 1..4 %}
+
+						<div class="tab-pane py-3" id="category-note-{{i}}">
+							<div class="flex">
+								<h2>Catégorie {{i}}
+								</h2>
+								<a class="btn m-1 btn-trash" data-bs-toggle="modal" data-bs-target="#modal-delete-category-{{i}}">
+									<i class="fas fa-trash-alt"></i>
+								</a>
+								<a class="btn m-1 btn-edit" data-bs-toggle="modal" data-bs-target="#modal-edit-category-{{i}}">
+									<i class="fas fa-edit"></i>
+								</a>
+							</div>
+							<div
+								class="accordion" id="accordionPanelsStayOpenExample">
+								{# récupération de chaque notes de la catégorie concernée #}
+								{% for j in 1..4 %}
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="panelsStayOpen-headingOne">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-{{j}}" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+												Note n°{{j}} 
+											</button>
+										</h2>
+										<div id="panelsStayOpen-{{j}}" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+											<div class="accordion-body">
+												<a href="" class="btn btn-trash" data-bs-toggle="modal" data-bs-target="#modal-delete-note-{{j}}">
+													<i class="fas fa-trash-alt"></i>
+												</a>
+												<a href="" class="btn btn-edit" data-bs-toggle="modal" data-bs-target="#modal-edit-note-{{j}}">
+													<i class="fas fa-edit"></i>
+												</a>
+												<strong>Description n°{{j}} - Voici la note n°{{j}} de la catégorie {{i}} </strong>
+											</div>
+										</div>
+									</div>
+
+
+									{# modal suppression note #}
+									<div class="modal fade" id="modal-delete-note-{{j}}" tabindex="-1" aria-labelledby="modal-delete-note-{{j}}" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLabel">Suppression de la note
+																												Note n°{{j}}</h5>
+													<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+												</div>
+												<div class="modal-body">
+													Etes-vous sûr de bien vouloir supprimer la note
+																										"Note n°{{j}}"
+																										?
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+													<a href="" class="btn btn-primary">Confirmer</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									{# modal edition note #}
+									<div class="modal fade" id="modal-edit-note-{{j}}" tabindex="-1" aria-labelledby="modal-edit-note-{{j}}" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLabel">Edition de la note
+																													Note n°{{j}}</h5>
+													<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+												</div>
+												<div class="modal-body">
+													Etes-vous sûr de bien vouloir éditer la note
+																											"Note n°{{j}}"
+																										?
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+													<a href="" class="btn btn-primary">Confirmer</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								{% endfor %}
+							</div>
+						</div>
+
+						{# modal suppression catégorie #}
+						<div class="modal fade" id="modal-delete-category-{{i}}" tabindex="-1" aria-labelledby="modal-delete-category-{{i}}" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">Suppression de la catégorie
+											{{i}}</h5>
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										Etes-vous sûr de bien vouloir supprimer la catégorie
+										{{i}}
+										ainsi que les notes se trouvant dans la catégorie ?
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+										<a href="" class="btn btn-primary">Confirmer</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						{# modal edition catégorie #}
+						<div class="modal fade" id="modal-edit-category-{{i}}" tabindex="-1" aria-labelledby="modal-edit-category-{{i}}" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">Edition de la catégorie
+											{{i}}</h5>
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										Etes-vous sûr de bien vouloir éditer la catégorie
+										{{i}}
+										?
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+										<a href="" class="btn btn-primary">Confirmer</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					{% endfor %}
+
+				</div>
+			</div>
+		</div>
+	{% endif %}
 
 
 {% endblock %}
