@@ -3,28 +3,17 @@
 		<a class="navbar-brand flex" href="{{path('home')}} ">
 			<h1 class="title-nav-bar">Le trésor de l'escapade</h1>
 		</a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#all-button-navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
+
+
+		<div class="collapse navbar-collapse collapse-horizontal" id="all-button-navbar">
 			<div class="flex">
 				{% if app.user %}
 					{% if is_granted('ROLE_ADMIN') %}
-						<ul class="navbar-nav me-2 mb-2 mb-lg-0 ">
-							<li class="nav-item dropdown flex">
-								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-									Chat-Pitre
-								</a>
-								<a class="nav-link" href="{{path('meteo')}}" id="" role="button" aria-expanded="false">
-									Météo
-								</a>
-								<a class="nav-link" href="{{path('list_items')}}" id="" role="button" aria-expanded="false">
-									Liste de course
-								</a>
-								<a class="nav-link" href="#" id="" role="button" aria-expanded="false">
-									Love
-								</a>
-								<a class="nav-link" href="{{path('note')}}" id="" role="button"  aria-expanded="false">
-									Prise de note
-								</a>
+						<ul class="navbar-nav me-2 mb-2 mb-lg-0  flex wrap">
+							<li class="nav-item dropdown ">
+								<a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									Chat-Pitre</a>
 								<ul class="dropdown-menu dropdown-menu-chapitre" aria-labelledby="navbarDropdown">
 									<li>
 										<a class="dropdown-item" href=" {{path('story_introduction')}} ">Chapitre 1 : Introduction</a>
@@ -133,31 +122,44 @@
 									</li>
 								</ul>
 							</li>
+							<li class="nav-item ">
+								<a class="nav-link " href="{{path('meteo')}}" id="" role="button" aria-expanded="false">
+									Météo</a>
+							</li>
+							<li class="nav-item ">
+								<a class="nav-link " href="{{path('list_items')}}" id="" role="button" aria-expanded="false">
+									Liste de course</a>
+							</li>
+							<li class="nav-item ">
+								<a class="nav-link " href="#" id="" role="button" aria-expanded="false">
+									Love</a>
+							</li>
+							<li class="nav-item ">
+								<a class="nav-link " href="{{path('note')}}" id="" role="button" aria-expanded="false">
+									Prise de note
+								</a>
+							</li>
+							<li class="nav-item dropdown ">
+								{% if app.user %}
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										{{ app.user.name }}
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<li class="flex">
+											<a class="btn-connect" href=" {{ path('app_logout') }} ">Déconnexion</a>
+										</li>
+									</ul>
+								{% else %}
+									<a class="btn-connect me-2" href=" {{ path('app_login')}} ">Se connecter</a>
+									<a class="btn-connect me-2" href=" {{ path('app_register')}} ">S'inscrire</a>
+								{% endif %}
+							</li>
 						</ul>
 					{% endif %}
 				{% endif %}
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-					<li class="nav-item dropdown flex">
-						{% if app.user %}
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								{{ app.user.name }}
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								{# <li class="flex">
-									<a class="btn-connect" href="">Button</a>
-								</li>
-								<hr> #}
-								<li class="flex">
-									<a class="btn-connect" href=" {{ path('app_logout') }} ">Déconnexion</a>
-								</li>
-							</ul>
-						{% else %}
-							<a class="btn-connect me-2" href=" {{ path('app_login')}} ">Se connecter</a>
-							<a class="btn-connect me-2" href=" {{ path('app_register')}} ">S'inscrire</a>
-						{% endif %}
-					</li>
-				</ul>
 			</div>
 		</div>
 	</div>
 </nav>
+
+

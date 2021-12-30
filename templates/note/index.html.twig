@@ -9,229 +9,160 @@
 {% endblock %}
 
 {% block body %}
-
 	<div class="div-note">
-		<div class="container p-5">
-			<ul class="nav nav-tabs">
+		<div class="container p-5 ">
+			<ul class="nav nav-tabs div-button-category">
 				<li class="nav-item">
-					<a data-bs-toggle="tab" class="nav-link active" href="#home">
-						<icon class="fa fa-home"></icon>
-						Genech</a>
+					<a class="nav-link" href="{{path('create_category_note')}}">
+						+ Catégorie</a>
 				</li>
 				<li class="nav-item">
-					<a data-bs-toggle="tab" class="nav-link" href="#profile">
-						<i class="fa fa-user"></i>
-						Une fleur pour toi
-					</a>
+					<a class="nav-link" href="{{path('create_note')}}">
+						+ Notes</a>
 				</li>
-				<li class="nav-item">
-					<a data-bs-toggle="tab" class="nav-link" href="#profile1">
-						<i class="fa fa-user"></i>
-						Appart</a>
-				</li>
-				<li class="nav-item">
-					<a data-bs-toggle="tab" class="nav-link" href="#profile2">
-						<i class="fa fa-user"></i>
-						Famille</a>
-				</li>
+			</ul>
+			<ul class="nav nav-tabs div-button-category">
+				{% for category in categories %}
+					<li class="nav-item ">
+						<a data-bs-toggle="tab" class="nav-link button-category-note" href="#{{category.name | slug }}">
+							{{category.name}}</a>
+					</li>
+				{% endfor %}
+
 			</ul>
 			<!-- Tab panes -->
 			<div class="tab-content">
-				<div class="tab-pane active py-3" id="home">
-					<h2>Genech
-					</h2>
-					<div class="accordion" id="accordionPanelsStayOpenExample">
-						<div class="accordion-item">
-							<h2 class="accordion-header" id="panelsStayOpen-headingOne">
-								<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-									Faire un croquis
-								</button>
+
+				{% for category in categories %}
+					<div class="tab-pane py-3" id="{{category.name | slug}}">
+						<div class="flex">
+							<h2>{{category.name}}
 							</h2>
-							<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
-								<div class="accordion-body">
-									<strong>This is the first item's accordion body.</strong>
-									It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-									<code>.accordion-body</code>, though the transition does limit overflow.
-								</div>
-							</div>
+							<a class="btn m-1 btn-trash" data-bs-toggle="modal" data-bs-target="#modal-delete-category-{{category.id}}">
+								<i class="fas fa-trash-alt"></i>
+							</a>
+							<a class="btn m-1 btn-edit" data-bs-toggle="modal" data-bs-target="#modal-edit-category-{{category.id}}">
+								<i class="fas fa-edit"></i>
+							</a>
 						</div>
-						<div class="accordion-item">
-							<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-									Apprendre nouvelle table
-								</button>
-							</h2>
-							<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-								<div class="accordion-body">
-									<strong>This is the second item's accordion body.</strong>
-									It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-									<code>.accordion-body</code>, though the transition does limit overflow.
+						<div
+							class="accordion" id="accordionPanelsStayOpenExample">
+							{# récupération de chaque notes de la catégorie concernée #}
+							{% for note in category.notes %}
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="panelsStayOpen-headingOne">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-{{note.title | slug}}" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+											{{note.title}}
+										</button>
+									</h2>
+									<div id="panelsStayOpen-{{note.title | slug}}" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+										<div class="accordion-body">
+											<a href="" class="btn btn-trash" data-bs-toggle="modal" data-bs-target="#modal-delete-note-{{note.id}}">
+												<i class="fas fa-trash-alt"></i>
+											</a>
+											<a href="" class="btn btn-edit" data-bs-toggle="modal" data-bs-target="#modal-edit-note-{{note.id}}">
+												<i class="fas fa-edit"></i>
+											</a>
+											<strong>{{note.description}}</strong>
+										</div>
+									</div>
 								</div>
-							</div>
+
+
+								{# modal suppression note #}
+								<div class="modal fade" id="modal-delete-note-{{note.id}}" tabindex="-1" aria-labelledby="modal-delete-note-{{note.id}}" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel">Suppression de la note
+													{{note.title}}</h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
+												Etes-vous sûr de bien vouloir supprimer la note
+												{{note.title}}
+												?
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+												<a href="{{ path('delete_note', {id: note.id}) }}" class="btn btn-primary">Confirmer</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								{# modal edition note #}
+								<div class="modal fade" id="modal-edit-note-{{note.id}}" tabindex="-1" aria-labelledby="modal-edit-note-{{note.id}}" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel">Edition de la note
+													{{note.title}}</h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
+												Etes-vous sûr de bien vouloir éditer la note
+												{{note.title}}
+												?
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+												<a href="{{ path('edit_note', {id: note.id}) }}" class="btn btn-primary">Confirmer</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							{% endfor %}
 						</div>
-						<div class="accordion-item">
-							<h2 class="accordion-header" id="panelsStayOpen-headingThree">
-								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-									Ramener outils
-								</button>
-							</h2>
-							<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-								<div class="accordion-body">
-									<strong>This is the third item's accordion body.</strong>
-									It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-									<code>.accordion-body</code>, though the transition does limit overflow.
+					</div>
+
+					{# modal suppression catégorie #}
+					<div class="modal fade" id="modal-delete-category-{{category.id}}" tabindex="-1" aria-labelledby="modal-delete-category-{{category.id}}" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Suppression de la catégorie
+										{{category.name}}</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									Etes-vous sûr de bien vouloir supprimer la catégorie
+									{{category.name}}
+									ainsi que les notes se trouvant dans la catégorie ?
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+									<a href="{{ path('delete_category_note', {id: category.id}) }}" class="btn btn-primary">Confirmer</a>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="tab-pane fade py-3" id="profile">
-					<h2>Une fleur pour toi
-					</h2>
-					<div class="accordion" id="accordionPanelsStayOpenExample">
-						<div class="accordion-item">
-							<h2 class="accordion-header" id="panelsStayOpen-headingOne">
-								<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-									Mise à l'eau
-								</button>
-							</h2>
-							<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
-								<div class="accordion-body">
-									<strong>This is the first item's accordion body.</strong>
-									It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-									<code>.accordion-body</code>, though the transition does limit overflow.
+					{# modal edition catégorie #}
+					<div class="modal fade" id="modal-edit-category-{{category.id}}" tabindex="-1" aria-labelledby="modal-edit-category-{{category.id}}" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Edition de la catégorie
+										{{category.name}}</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 								</div>
-							</div>
-						</div>
-						<div class="accordion-item">
-							<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-									Faire les bouquets
-								</button>
-							</h2>
-							<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-								<div class="accordion-body">
-									<strong>This is the second item's accordion body.</strong>
-									It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-									<code>.accordion-body</code>, though the transition does limit overflow.
+								<div class="modal-body">
+									Etes-vous sûr de bien vouloir éditer la catégorie
+									{{category.name}}
+									?
 								</div>
-							</div>
-						</div>
-						<div class="accordion-item">
-							<h2 class="accordion-header" id="panelsStayOpen-headingThree">
-								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-									Commande
-								</button>
-							</h2>
-							<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-								<div class="accordion-body">
-									<strong>This is the third item's accordion body.</strong>
-									It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-									<code>.accordion-body</code>, though the transition does limit overflow.
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+									<a href="{{ path('edit_category_note', {id: category.id}) }}" class="btn btn-primary">Confirmer</a>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="tab-pane fade py-3" id="profile1">
-					<h2>Appart
-					</h2>
-					<div class="accordion" id="accordionPanelsStayOpenExample">
-						<div class="accordion-item">
-							<h2 class="accordion-header" id="panelsStayOpen-headingOne">
-								<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-									Animaux #1
-								</button>
-							</h2>
-							<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
-								<div class="accordion-body">
-									<strong>Serpent fait le 13 janvier.</strong>
-								</div>
-							</div>
-						</div>
-						<div class="accordion-item">
-							<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-									Chat #2
-								</button>
-							</h2>
-							<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-								<div class="accordion-body">
-									<strong>This is the second item's accordion body.</strong>
-									litière fait le 5 décembre
-									<code>.accordion-body</code>, though the transition does limit overflow.
-								</div>
-							</div>
-						</div>
-						<div class="accordion-item">
-							<h2 class="accordion-header" id="panelsStayOpen-headingThree">
-								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-									Plante à arroser #3
-								</button>
-							</h2>
-							<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-								<div class="accordion-body">
-									<strong>This is the third item's accordion body.</strong>
-									<p>Cactus le jeudi </p>
-                                    <p>aloe vera le mardi</p>
-									<code>.accordion-body</code>, though the transition does limit overflow.
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="tab-pane fade py-3" id="profile2">
-					<h2>Famille
-					</h2>
-					<div class="accordion" id="accordionPanelsStayOpenExample">
-						<div class="accordion-item">
-							<h2 class="accordion-header" id="panelsStayOpen-headingOne">
-								<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-									Accordion Item #1
-								</button>
-							</h2>
-							<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
-								<div class="accordion-body">
-									<strong>This is the first item's accordion body.</strong>
-									It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-									<code>.accordion-body</code>, though the transition does limit overflow.
-								</div>
-							</div>
-						</div>
-						<div class="accordion-item">
-							<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-									Accordion Item #2
-								</button>
-							</h2>
-							<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-								<div class="accordion-body">
-									<strong>This is the second item's accordion body.</strong>
-									It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-									<code>.accordion-body</code>, though the transition does limit overflow.
-								</div>
-							</div>
-						</div>
-						<div class="accordion-item">
-							<h2 class="accordion-header" id="panelsStayOpen-headingThree">
-								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-									Accordion Item #3
-								</button>
-							</h2>
-							<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-								<div class="accordion-body">
-									<strong>This is the third item's accordion body.</strong>
-									It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-									<code>.accordion-body</code>, though the transition does limit overflow.
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				{% endfor %}
+
 			</div>
 		</div>
-
 	</div>
+
 
 {% endblock %}
 
@@ -239,10 +170,13 @@
 {% block javascript %}
 	{{parent()}}
 	<script>
-		$('.display').DataTable({responsive: true});
+		// $('.button-category .nav-link:first').addClass('active');
+
+$('.display').DataTable({responsive: true});
 
 $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
 $($.fn.dataTable.tables(true)).DataTable().columns.adjust().responsive.recalc();
 });
+
 	</script>
 {% endblock %}

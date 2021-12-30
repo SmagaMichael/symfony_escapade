@@ -1,3 +1,4 @@
+/* mode portable */
 @media screen and (max-width: 749px) {
     .title-nav-bar{
         margin: 0;
@@ -17,6 +18,7 @@
         margin: 5px;
         border: 1px solid wheat !important;
     }
+
 }
 
 @media screen and (min-width: 750px) {
@@ -37,6 +39,23 @@
         margin: 5px;
         border: 1px solid wheat !important;
     }
+}
+/* mode tablette et en dessous */
+@media screen and (max-width: 992px) {
+    .navbar-nav{
+        width: 80%;
+    border: 1px solid green;
+    position: fixed;
+    left: 0;
+    top: 50px;
+    z-index: 999;
+    background-color: black;
+    }
+
+    .navbar-nav .nav-item {
+        padding-right: 15px;
+        width: 100%;
+     }
 }
 
 .misa-navbar{
@@ -68,6 +87,9 @@
 
 .navbar-nav .dropdown-menu {
     position: absolute !important;
+}
+.navbar-nav .nav-item {
+   padding-right: 15px;
 }
 
 .dropdown-menu-chapitre{
@@ -117,4 +139,12 @@ top: 50px !important;
     color: #f8b208 !important;
     text-decoration: none !important;
     text-transform: none !important;
+}
+
+.menu-relatif{
+    position: relative;
+}
+
+.menu-absolute{
+    position: absolute;
 }

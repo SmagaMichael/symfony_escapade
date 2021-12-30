@@ -1,3 +1,68 @@
 .div-note{
+    margin-top: 3em;
+}
+
+.btn-create-note{
+    background-color: green;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+}
+
+
+.create-category-note{
     margin-top: 9em;
+    padding: 30px;
+
+}
+
+h1{
+    color: green;
+    text-align: center;
+}
+
+.accordion-item{
+    margin-bottom: 5px;
+}
+
+.div-button-category{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.btn-trash{
+    color: orange;
+    border: 1px solid gray;
+}
+.btn-trash:hover{
+    color: rgb(255, 0, 0);
+}
+.btn-edit{
+color: green;
+border: 1px solid gray;
+
+}
+.btn-edit:hover{
+color: rgb(31, 231, 31);
+}
+
+/* mode tablette et en dessous */
+@media screen and (max-width: 992px) {
+    .div-button-category .nav-item{
+        width: 50%;
+     }
+}
+
+/* mode portable */
+@media screen and (max-width: 749px) {
+
+}
+
+.button-category-note{
+border: 1px solid green !important;
+margin: 10px 5px;
 }

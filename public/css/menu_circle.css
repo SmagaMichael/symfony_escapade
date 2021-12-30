@@ -5,7 +5,7 @@
     top: -60px;
     position: absolute;
     cursor: pointer;
-    z-index: 999;
+    z-index: 500;
 }
 
 .all-circle{
@@ -24,7 +24,7 @@
     top: -60px;
     position: absolute;
     cursor: pointer;
-    z-index: 999;
+    z-index: 500;
 }
 
 .all-circle a {
