@@ -8,8 +8,6 @@
 
 		<div class="collapse navbar-collapse collapse-horizontal" id="all-button-navbar">
 			<div class="flex">
-				{% if app.user %}
-					{% if is_granted('ROLE_ADMIN') %}
 						<ul class="navbar-nav me-2 mb-2 mb-lg-0  flex wrap">
 							<li class="nav-item dropdown ">
 								<a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -155,8 +153,7 @@
 								{% endif %}
 							</li>
 						</ul>
-					{% endif %}
-				{% endif %}
+			
 			</div>
 		</div>
 	</div>
