@@ -57,10 +57,6 @@ color: rgb(31, 231, 31);
      }
 }
 
-/* mode portable */
-@media screen and (max-width: 749px) {
-
-}
 
 .button-category-note{
 border: 1px solid green !important;
