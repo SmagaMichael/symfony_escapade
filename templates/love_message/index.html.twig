@@ -9,111 +9,199 @@
 {% endblock %}
 
 {% block body %}
+	{% if is_granted('ROLE_ADMIN') %}
 
-	<div class="div-all-chat">
-		<div class="clearfix">
+		<div class="div-all-chat">
+			<div class="clearfix col-lg-5 col-md-8 col-12">
+				<div class="chat">
 
-
-			<div class="chat">
-				<div class="chat-header chat-header-michael clearfix">
-					<img class="avatar-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLZQHz4PEtb4KkDh0ZPrpQMB_E1MNYA4Nh-w&usqp=CAU" alt="avatar"/>
-
-					<div class="chat-about">
-						<div class="chat-with">Conversation avec Chloé</div>
-						<div class="chat-num-messages">Nombre de messages : 1203</div>
+					<div class="chat-header chat-header-{{app.user.name  | slug | lower}} clearfix">
+						{% if app.user.name == 'Chloé' %}
+							<img class="avatar-img" src="https://i.pinimg.com/564x/fb/66/0e/fb660e0016b3c17c9e769a9805a4385f.jpg" alt="avatar"/>
+						{% else %}
+							<img class="avatar-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLZQHz4PEtb4KkDh0ZPrpQMB_E1MNYA4Nh-w&usqp=CAU" alt="avatar"/>
+						{% endif %}
+						<div class="chat-about">
+							{% if app.user.name == 'Chloé' %}
+								<div class="chat-with">Conversation avec Michaël</div>
+							{% else %}
+								<div class="chat-with">Conversation avec Chloé</div>
+							{% endif %}
+							<div class="chat-num-messages">Nombre de messages : {{ countMessages }}</div>
+						</div>
+						<i class="fa fa-star"></i>
 					</div>
-					<i class="fa fa-star"></i>
-				</div>
-				<!-- end chat-header -->
+					<!-- end chat-header -->
 
-				<div class="chat-history">
-					<ul>
-						<li class="clearfix">
-							<div class="message-data align-right">
-								<span class="message-data-time">10:10 AM, Today</span>
-								&nbsp; &nbsp;
-								<span class="message-data-name">Michaël</span>
-								<i class="fa fa-circle online-michael"></i>
+					<div class="chat-history">
+						<ul>
 
-							</div>
-							<div class="message message-michael float-right">
-								Hi Chloé, how are you? How is the project coming along?
-							</div>
-						</li>
 
-						<li>
-							<div class="message-data">
-								<span class="message-data-name">
-									<i class="fa fa-circle online-chloe"></i>
-									Chloé</span>
-								<span class="message-data-time">10:12 AM, Today</span>
-							</div>
-							<div class="message message-chloe">
-								Are we meeting today? Project has been already finished and I have results to show you.
-							</div>
-						</li>
+							{% for message in messages %}
 
-						<li class="clearfix">
-							<div class="message-data align-right">
-								<span class="message-data-time">10:14 AM, Today</span>
-								&nbsp; &nbsp;
-								<span class="message-data-name">Michaël</span>
-								<i class="fa fa-circle online-michael"></i>
+								{# l'utilisateur voit ses message à droite #}
+								{% if  message.writerMessage.name  ==  app.user.name  %}
+									<li class="clearfix">
+										<div class="message-data align-right">
+											<span class="message-data-time">{{message.time | date('d-m-Y')}}
+												à
+												{{message.time | date('H:i')}}</span>
+											&nbsp; &nbsp;
+											<span class="message-data-name">{{message.writerMessage.name}}</span>
+											<i class="fa fa-circle online-{{message.writerMessage.name | slug | lower}}"></i>
 
-							</div>
-							<div class="message message-michael float-right">
-								Well I am not sure. The rest of the team is not here yet. Maybe in an hour or so? Have you faced any problems at the last phase of the project?
-							</div>
-						</li>
+										</div>
+										<div class="message-me message-{{message.writerMessage.name | slug | lower}} float-right">
+											{{message.text}}
+										</div>
+									</li>
+								{% else %}
+									<li>
+										<div class="message-data">
+											<span class="message-data-name">
+												<i class="fa fa-circle online-{{message.writerMessage.name | slug | lower}}"></i>
+												{{message.writerMessage.name}}</span>
+											<span class="message-data-time">{{message.time | date('d-m-Y')}}
+												à
+												{{message.time | date('H:i')}}</span>
+										</div>
+										<div class="message-other message-{{message.writerMessage.name | slug | lower}}">
+											{{message.text}}
+										</div>
+									</li>
+								{% endif %}
 
-						<li>
-							<div class="message-data">
-								<span class="message-data-name">
-									<i class="fa fa-circle online-chloe"></i>
-									Chloé</span>
-								<span class="message-data-time">10:20 AM, Today</span>
-							</div>
-							<div class="message message-chloe">
-								Actually everything was fine. I'm very excited to show this to our team.
-							</div>
-						</li>
 
-						<li>
-							<div class="message-data">
-								<span class="message-data-name">
-									<i class="fa fa-circle online-chloe"></i>
-									Chloé</span>
-								<span class="message-data-time">10:31 AM, Today</span>
-							</div>
-							<i class="fa fa-circle online"></i>
-							<i class="fa fa-circle online" style="color: #AED2A6"></i>
-							<i class="fa fa-circle online" style="color:#DAE9DA"></i>
-						</li>
+							{% endfor %}
 
-					</ul>
+
+						</ul>
+
+					</div>
+					<!-- end chat-history -->
+
+					<div class="chat-message clearfix">
+						{{ form_start(messageForm) }}
+						{{ form_row(messageForm.text, {'attr': {'class': '', 'placeholder': 'Message mignon'}}) }}
+
+						<button type="submit" class="btn  button-list">Envoyer</button>
+						{{ form_end(messageForm) }}
+
+					</div>
+					<!-- end chat-message -->
 
 				</div>
-				<!-- end chat-history -->
-
-				<div class="chat-message clearfix">
-					<textarea name="message-to-send" id="message-to-send" placeholder="Type your message" rows="3"></textarea>
-
-					<i class="fa fa-file-o"></i>
-					&nbsp;&nbsp;&nbsp;
-					<i class="fa fa-file-image-o"></i>
-
-					<button>Envoyer</button>
-
-				</div>
-				<!-- end chat-message -->
+				<!-- end chat -->
 
 			</div>
-			<!-- end chat -->
-
 		</div>
-	</div>
-	<!-- end container -->
+		<!-- end container -->
+	{% else %}
 
+		<div class="div-all-chat">
+			<div class="clearfix">
+
+
+				<div class="chat">
+					<div class="chat-header chat-header-michael clearfix">
+						<img class="avatar-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLZQHz4PEtb4KkDh0ZPrpQMB_E1MNYA4Nh-w&usqp=CAU" alt="avatar"/>
+
+						<div class="chat-about">
+							<div class="chat-with">Conversation avec Chloé</div>
+							<div class="chat-num-messages">Nombre de messages : 1203</div>
+						</div>
+						<i class="fa fa-star"></i>
+					</div>
+					<!-- end chat-header -->
+
+					<div class="chat-history">
+						<ul>
+							<li class="clearfix">
+								<div class="message-data align-right">
+									<span class="message-data-time">10:10 AM, Today</span>
+									&nbsp; &nbsp;
+									<span class="message-data-name">Michaël</span>
+									<i class="fa fa-circle online-michael"></i>
+
+								</div>
+								<div class="message message-michael float-right">
+									Hi Chloé, how are you? How is the project coming along?
+								</div>
+							</li>
+
+							<li>
+								<div class="message-data">
+									<span class="message-data-name">
+										<i class="fa fa-circle online-chloe"></i>
+										Chloé</span>
+									<span class="message-data-time">10:12 AM, Today</span>
+								</div>
+								<div class="message message-chloe">
+									Are we meeting today? Project has been already finished and I have results to show you.
+								</div>
+							</li>
+
+							<li class="clearfix">
+								<div class="message-data align-right">
+									<span class="message-data-time">10:14 AM, Today</span>
+									&nbsp; &nbsp;
+									<span class="message-data-name">Michaël</span>
+									<i class="fa fa-circle online-michael"></i>
+
+								</div>
+								<div class="message message-michael float-right">
+									Well I am not sure. The rest of the team is not here yet. Maybe in an hour or so? Have you faced any problems at the last phase of the project?
+								</div>
+							</li>
+
+							<li>
+								<div class="message-data">
+									<span class="message-data-name">
+										<i class="fa fa-circle online-chloe"></i>
+										Chloé</span>
+									<span class="message-data-time">10:20 AM, Today</span>
+								</div>
+								<div class="message message-chloe">
+									Actually everything was fine. I'm very excited to show this to our team.
+								</div>
+							</li>
+
+							<li>
+								<div class="message-data">
+									<span class="message-data-name">
+										<i class="fa fa-circle online-chloe"></i>
+										Chloé</span>
+									<span class="message-data-time">10:31 AM, Today</span>
+								</div>
+								<i class="fa fa-circle online"></i>
+								<i class="fa fa-circle online" style="color: #AED2A6"></i>
+								<i class="fa fa-circle online" style="color:#DAE9DA"></i>
+							</li>
+
+						</ul>
+
+					</div>
+					<!-- end chat-history -->
+
+					<div class="chat-message clearfix">
+						<textarea name="message-to-send" id="message-to-send" placeholder="Type your message" rows="3"></textarea>
+
+						<i class="fa fa-file-o"></i>
+						&nbsp;&nbsp;&nbsp;
+						<i class="fa fa-file-image-o"></i>
+
+						<button>Envoyer</button>
+
+					</div>
+					<!-- end chat-message -->
+
+				</div>
+				<!-- end chat -->
+
+			</div>
+		</div>
+		<!-- end container -->
+	{% endif %}
 
 {% endblock %}
 

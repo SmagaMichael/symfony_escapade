@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -42,6 +44,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\Column(type="string", length=255)
      */
     private $name;
+
+    /**
+     * @ORM\OneToMany(targetEntity=LoveMessage::class, mappedBy="writer_message")
+     */
+    private $loveMessages;
+
+    public function __construct()
+    {
+        $this->loveMessages = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -140,6 +152,36 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|LoveMessage[]
+     */
+    public function getLoveMessages(): Collection
+    {
+        return $this->loveMessages;
+    }
+
+    public function addLoveMessage(LoveMessage $loveMessage): self
+    {
+        if (!$this->loveMessages->contains($loveMessage)) {
+            $this->loveMessages[] = $loveMessage;
+            $loveMessage->setWriterMessage($this);
+        }
+
+        return $this;
+    }
+
+    public function removeLoveMessage(LoveMessage $loveMessage): self
+    {
+        if ($this->loveMessages->removeElement($loveMessage)) {
+            // set the owning side to null (unless already changed)
+            if ($loveMessage->getWriterMessage() === $this) {
+                $loveMessage->setWriterMessage(null);
+            }
+        }
 
         return $this;
     }

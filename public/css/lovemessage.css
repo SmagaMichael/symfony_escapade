@@ -4,7 +4,8 @@
 }
 
 .chat {
-  width: 490px;
+  /* width: 490px; */
+  width: 100%;
   float: left;
   background: #F2F5F8;
   /* background-image: url('https://cdn1.vectorstock.com/i/1000x1000/62/15/love-pattern-background-vector-926215.jpg'); */
@@ -147,9 +148,11 @@
     justify-content: center;
 }
 }
+
 .div-all-chat{
     margin-top: 5em;
     background-image: url('https://cdn1.vectorstock.com/i/1000x1000/62/15/love-pattern-background-vector-926215.jpg');
+    border-top: green 2px dashed;
 }
 
 body{
@@ -181,14 +184,6 @@ border: 1px solid #1a8aed;
 .message-michael{
 background-color: #1a8aed;
 }
-/* fleche */
-.chat .chat-history .message-michael:after {
-  border-bottom-color: #1a8aed;
-  left: 93%;
-}
-.chat .chat-history .message-chloe:after {
-  border-bottom-color: pink;
-}
 
 .message-chloe{
   background-color: pink;
@@ -200,4 +195,58 @@ li{
 
 .chat-history ul{
   padding: 0;
+}
+
+.chat .chat-history .message-me {
+  color: white;
+  padding: 18px 20px;
+  line-height: 26px;
+  font-size: 16px;
+  border-radius: 7px;
+  margin-bottom: 30px;
+  width: 90%;
+  position: relative;
+}
+.chat .chat-history .message-me:after {
+  bottom: 100%;
+  left: 93%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+.chat .chat-history .message-other {
+  color: white;
+  padding: 18px 20px;
+  line-height: 26px;
+  font-size: 16px;
+  border-radius: 7px;
+  margin-bottom: 30px;
+  width: 90%;
+  position: relative;
+}
+.chat .chat-history .message-other:after {
+  bottom: 100%;
+  left: 7%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+/* fleche */
+.chat .chat-history .message-michael:after {
+  border-bottom-color: #1a8aed;
+}
+.chat .chat-history .message-chloe:after {
+  border-bottom-color: pink;
 }
