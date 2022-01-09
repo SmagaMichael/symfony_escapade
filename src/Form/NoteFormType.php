@@ -18,7 +18,8 @@ class NoteFormType extends AbstractType
                 'label' => ' ',
                 'attr' => [
                     'class' => 'form-control',
-                    'placeholder' => 'Titre'
+                    'placeholder' => 'Titre',
+                    'autocomplete' => 'off'
                 ]
             ])
             

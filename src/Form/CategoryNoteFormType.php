@@ -17,7 +17,8 @@ class CategoryNoteFormType extends AbstractType
                 'label' => ' ',
                 'attr' => [
                     'class' => 'form-control',
-                    'placeholder' => 'Nom de catégorie'
+                    'placeholder' => 'Nom de catégorie',
+                    'autocomplete' => 'off'
                 ]
             ])
         ;
