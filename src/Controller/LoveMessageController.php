@@ -2,16 +2,17 @@
 
 namespace App\Controller;
 
-use App\Entity\LoveMessage;
-use App\Form\LoveMessageFormType;
-use App\Repository\LoveMessageRepository;
 use DateTime;
 use DateTimeInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\LoveMessage;
+use App\Form\LoveMessageFormType;
+use Doctrine\ORM\EntityManagerInterface;
+use App\Repository\LoveMessageRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class LoveMessageController extends AbstractController
 {
@@ -45,5 +46,48 @@ class LoveMessageController extends AbstractController
             'countMessages' =>  $countMessages,
             'messageForm' => $form->createView(),
         ]);
+    }
+
+
+        /**
+     * @Route("/admin/edit/message/{id}", name="edit_message")
+     */
+    public function edit_note($id, Request $request, LoveMessageRepository $loveMessageRepository, EntityManagerInterface $manager): Response
+    {
+
+        $all_message = $loveMessageRepository->findAll();
+        $countMessages = count($all_message);
+
+        $message = $loveMessageRepository->find($id);
+        $form = $this->createForm(LoveMessageFormType::class, $message);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted()) {
+            $manager->persist($message);
+            $manager->flush();
+            return $this->redirectToRoute('love_message');
+        }
+        $formView = $form->createView();
+
+        return $this->render('love_message/edit_message.html.twig', [
+            'messages' =>  $all_message,
+            'countMessages' =>  $countMessages,
+            'message' => $message,
+            'messageForm' => $formView,
+        ]);
+    }
+
+    /**
+     * @Route("/admin/delete/message/{id}", name="delete_message")
+     */
+    public function delete_note(LoveMessage $loveMessage): Response
+    {
+         // Pour supprimer avec Doctrine
+         $entityManager = $this->getDoctrine()->getManager();
+         $entityManager->remove($loveMessage);
+
+         $entityManager->flush(); 
+  
+         return $this->redirectToRoute('love_message');
     }
 }

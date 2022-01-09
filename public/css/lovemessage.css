@@ -142,14 +142,12 @@
 /* Partie ajoutée */
 
 /* mode portable */
-@media screen and (min-width: 490px) {
-  .div-all-chat{
-    display: flex;
-    justify-content: center;
-}
-}
+
+
 
 .div-all-chat{
+  display: flex;
+    justify-content: center;
     margin-top: 5em;
     background-image: url('https://cdn1.vectorstock.com/i/1000x1000/62/15/love-pattern-background-vector-926215.jpg');
     border-top: green 2px dashed;
@@ -249,4 +247,13 @@ li{
 }
 .chat .chat-history .message-chloe:after {
   border-bottom-color: pink;
+}
+
+.btn-trash{
+  border: 1px solid crimson;
+  color: crimson;
+}
+.btn-edit{
+border: 1px solid green;
+color: green;
 }

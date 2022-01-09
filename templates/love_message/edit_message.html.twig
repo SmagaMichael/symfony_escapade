@@ -44,10 +44,10 @@
 								{% if  message.writerMessage.name  ==  app.user.name  %}
 									<li class="clearfix">
 										<div class="message-data align-right">
-											<a href="" class="btn btn-trash" data-bs-toggle="modal" data-bs-target="#modal-delete-message-{{message.id}}" hidden>
+											<a href="" class="btn btn-trash" data-bs-toggle="modal" data-bs-target="#modal-delete-message-{{message.id}}">
 												<i class="fas fa-trash-alt"></i>
 											</a>
-											<a href="" class="btn btn-edit" data-bs-toggle="modal" data-bs-target="#modal-edit-message-{{message.id}}" hidden>
+											<a href="" class="btn btn-edit" data-bs-toggle="modal" data-bs-target="#modal-edit-message-{{message.id}}">
 												<i class="fas fa-edit"></i>
 											</a>
 											<span class="message-data-time">{{message.time | date('d-m-Y')}}
@@ -76,7 +76,7 @@
 												</div>
 												<div class="modal-footer">
 													<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-													<a href="{{ path('delete_message', {id: message.id}) }}" class="btn btn-primary">Supprimer</a>
+													<a href="{{ path('delete_message', {id: message.id}) }}" class="btn btn-primary">Confirmer</a>
 												</div>
 											</div>
 										</div>
@@ -95,7 +95,7 @@
 												</div>
 												<div class="modal-footer">
 													<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-													<a href="{{ path('edit_message', {id: message.id}) }}" class="btn btn-primary">Editer</a>
+													<a href="{{ path('edit_message', {id: message.id}) }}" class="btn btn-primary">Confirmer</a>
 												</div>
 											</div>
 										</div>
@@ -129,7 +129,7 @@
 						{{ form_start(messageForm) }}
 						{{ form_row(messageForm.text, {'attr': {'class': '', 'placeholder': 'Message mignon'}}) }}
 
-						<button type="submit" class="btn  button-message">Envoyer</button>
+						<button type="submit" class="btn  button-list">Envoyer</button>
 						{{ form_end(messageForm) }}
 
 					</div>

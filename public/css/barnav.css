@@ -47,9 +47,10 @@
     border: 1px solid green;
     position: fixed;
     left: 0;
-    top: 50px;
+    top: 0;
     z-index: 999;
     background-color: black;
+    height: 100%;
     }
 
     .navbar-nav .nav-item {
