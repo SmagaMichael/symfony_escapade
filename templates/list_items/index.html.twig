@@ -144,4 +144,5 @@
 {% block javascripts %}
 	{{ parent() }}
 	<script src="{{asset('js/list.js')}} "></script>
+	<script>$('#list_items_form_quantity').val(1);</script>
 {% endblock %}
